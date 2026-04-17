@@ -47,11 +47,16 @@ function CloseIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
+interface GalleryImage {
+  src: string;
+  label: string;
+}
+
 interface GalleryGroup {
   id: string;
   title: string;
   description: string;
-  images: string[];
+  images: GalleryImage[];
   videoLabel: string;
   serviceLink: string;
 }
@@ -62,10 +67,10 @@ const GALLERY_GROUPS: GalleryGroup[] = [
     title: "Boyasız Göçük Düzeltme",
     description: "Orijinal boyaya dokunmadan, göçükler iz bırakmadan düzeltildi.",
     images: [
-      "/images/boyasiz-oncesi.jpeg",
-      "/images/boyasiz-sonrasi.jpeg",
-      "/images/mini-oncesi.jpeg",
-      "/images/mini-sonrasi.jpeg",
+      { src: "/images/boyasiz-oncesi.jpeg", label: "Öncesi" },
+      { src: "/images/boyasiz-sonrasi.jpeg", label: "Sonrası" },
+      { src: "/images/mini-oncesi.jpeg", label: "Öncesi" },
+      { src: "/images/mini-sonrasi.jpeg", label: "Sonrası" },
     ],
     videoLabel: "Boyasız Göçük Düzeltme — İşlem Videosu",
     serviceLink: "/hizmetler/boyasiz-gocuk-duzeltme",
@@ -75,10 +80,10 @@ const GALLERY_GROUPS: GalleryGroup[] = [
     title: "Dolu Hasarı Onarımı",
     description: "Dolu kaynaklı onlarca göçük, tek seferde boyasız onarıldı.",
     images: [
-      "/images/dolu-oncesi.jpeg",
-      "/images/dolu-sonrasi.jpeg",
-      "/images/gunes-oncesi.jpeg",
-      "/images/gunes-sonrasi.jpeg",
+      { src: "/images/dolu-oncesi.jpeg", label: "Öncesi" },
+      { src: "/images/dolu-sonrasi.jpeg", label: "Sonrası" },
+      { src: "/images/gunes-oncesi.jpeg", label: "Öncesi" },
+      { src: "/images/gunes-sonrasi.jpeg", label: "Sonrası" },
     ],
     videoLabel: "Dolu Hasarı Onarımı — İşlem Videosu",
     serviceLink: "/hizmetler/dolu-hasari-onarimi",
@@ -88,10 +93,10 @@ const GALLERY_GROUPS: GalleryGroup[] = [
     title: "Küçük & Orta Göçük Düzeltme",
     description: "Park darbeleri ve kapı çarpmaları, aynı gün onarıldı.",
     images: [
-      "/images/mini-oncesi.jpeg",
-      "/images/mini-sonrasi.jpeg",
-      "/images/rotus-oncesi.jpeg",
-      "/images/rotus-sonrasi.jpeg",
+      { src: "/images/mini-oncesi.jpeg", label: "Öncesi" },
+      { src: "/images/mini-sonrasi.jpeg", label: "Sonrası" },
+      { src: "/images/rotus-oncesi.jpeg", label: "Öncesi" },
+      { src: "/images/rotus-sonrasi.jpeg", label: "Sonrası" },
     ],
     videoLabel: "Küçük & Orta Göçük — İşlem Videosu",
     serviceLink: "/hizmetler/kucuk-orta-gocuk-duzeltme",
@@ -101,10 +106,10 @@ const GALLERY_GROUPS: GalleryGroup[] = [
     title: "Değer Kaybı Önleme Onarımı",
     description: "Satış öncesi göçükler giderildi, araç hasarsız statüsünü korudu.",
     images: [
-      "/images/ppf-kaplama.jpeg",
-      "/images/gunes-oncesi.jpeg",
-      "/images/gunes-sonrasi.jpeg",
-      "/images/koltuk-oncesi.jpeg",
+      { src: "/images/ppf-kaplama.jpeg", label: "Öncesi / Sonrası" },
+      { src: "/images/gunes-oncesi.jpeg", label: "Öncesi" },
+      { src: "/images/gunes-sonrasi.jpeg", label: "Sonrası" },
+      { src: "/images/koltuk-oncesi.jpeg", label: "Öncesi" },
     ],
     videoLabel: "Değer Kaybı Önleme — İşlem Videosu",
     serviceLink: "/hizmetler/deger-kaybi-onleme",
@@ -114,10 +119,10 @@ const GALLERY_GROUPS: GalleryGroup[] = [
     title: "Kaporta Göçük Onarımı",
     description: "Kaput, tavan ve çamurluk göçükleri profesyonelce düzeltildi.",
     images: [
-      "/images/kaporta-boya-1.jpeg",
-      "/images/kaporta-boya-2.jpeg",
-      "/images/boyasiz-oncesi.jpeg",
-      "/images/boyasiz-sonrasi.jpeg",
+      { src: "/images/kaporta-boya-1.jpeg", label: "Çalışma Anı" },
+      { src: "/images/kaporta-boya-2.jpeg", label: "Sonrası" },
+      { src: "/images/boyasiz-oncesi.jpeg", label: "Öncesi" },
+      { src: "/images/boyasiz-sonrasi.jpeg", label: "Sonrası" },
     ],
     videoLabel: "Kaporta Göçük Onarımı — İşlem Videosu",
     serviceLink: "/hizmetler/kaporta-gocuk-onarimi",
@@ -248,13 +253,16 @@ export function GalleryPageClient({ site }: Props) {
                   className="group relative aspect-[4/3] overflow-hidden rounded-xl focus:outline-none focus:ring-2 focus:ring-[#d4232a] focus:ring-offset-2"
                 >
                   <Image
-                    src={img}
-                    alt={`${group.title} — Görsel ${iIdx + 1}`}
+                    src={img.src}
+                    alt={`${group.title} — ${img.label}`}
                     fill
                     sizes="(min-width:768px) 280px, 50vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-black/0 transition-all duration-300 group-hover:bg-black/30" />
+                  <div className="absolute left-2 top-2 rounded-md bg-black/60 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">
+                    {img.label}
+                  </div>
+                  <div className="absolute inset-0 bg-black/0 transition-all duration-300 group-hover:bg-black/20" />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-[#111827]">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-5 w-5">
@@ -270,7 +278,7 @@ export function GalleryPageClient({ site }: Props) {
             <div className="mt-6">
               <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded-2xl bg-[#0a1e3d]">
                 <Image
-                  src={group.images[0]}
+                  src={group.images[0].src}
                   alt={`${group.title} video`}
                   fill
                   sizes="(min-width:1024px) 1100px, 100vw"
@@ -409,7 +417,7 @@ export function GalleryPageClient({ site }: Props) {
             onClick={(e) => e.stopPropagation()}
           >
             <Image
-              src={GALLERY_GROUPS[lightbox.groupIdx].images[lightbox.imgIdx]}
+              src={GALLERY_GROUPS[lightbox.groupIdx].images[lightbox.imgIdx].src}
               alt={`${GALLERY_GROUPS[lightbox.groupIdx].title} — Görsel ${lightbox.imgIdx + 1}`}
               fill
               sizes="900px"

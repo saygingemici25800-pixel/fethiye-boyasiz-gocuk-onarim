@@ -19,14 +19,14 @@ export function HeroSlider() {
 
   return (
     <section
-      className="relative h-[100svh] min-h-[600px] w-full overflow-hidden text-white"
+      className="relative h-[85svh] min-h-[500px] max-h-[800px] w-full overflow-hidden text-white"
       aria-roledescription="carousel"
       aria-label="Tanıtım Slaytları"
     >
       {HERO_SLIDES.map((slide, i) => (
         <div
           key={slide.title}
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+          className={`absolute inset-0 transition-opacity duration-[1200ms] ease-in-out ${
             i === idx ? "opacity-100" : "pointer-events-none opacity-0"
           }`}
           aria-hidden={i !== idx}
@@ -37,26 +37,29 @@ export function HeroSlider() {
             fill
             priority={i === 0}
             sizes="100vw"
-            className={`object-cover ${i === idx ? "cs-ken-burns" : ""}`}
+            className={`object-cover object-center ${i === idx ? "cs-ken-burns" : ""}`}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a1e3d]/80 via-black/50 to-transparent" />
+          {/* Richer multi-stop gradient */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a1e3d]/85 via-[#0a1e3d]/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
 
           <div className="relative z-10 flex h-full items-center">
+            {/* 8px grid: px-24/32, max-w consistent */}
             <div className="mx-auto w-full max-w-[1200px] px-6 lg:px-8">
-              <div className="max-w-2xl">
-                <p className="cs-hero-badge mb-5 inline-block rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-white/90 backdrop-blur-sm md:text-sm">
+              <div className="max-w-[600px]">
+                <p className="cs-hero-badge mb-4 inline-block rounded-full border border-white/15 bg-white/[.07] px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-white/80 backdrop-blur-sm md:text-xs">
                   {slide.small}
                 </p>
-                <h1 className="cs-hero-title mb-6 text-4xl font-extrabold uppercase leading-[1.1] tracking-tight md:text-5xl lg:text-6xl">
+                <h1 className="cs-hero-title mb-5 text-[36px] font-extrabold uppercase leading-[1.08] tracking-tight md:text-[48px] lg:text-[56px]">
                   {slide.title}
                 </h1>
-                <p className="cs-hero-sub mb-10 max-w-lg text-base leading-relaxed text-white/85 md:text-lg">
+                <p className="cs-hero-sub mb-8 max-w-[480px] text-[15px] leading-[1.7] text-white/75 md:text-base">
                   {slide.subtitle}
                 </p>
-                <div className="cs-hero-cta flex flex-wrap items-center gap-4">
+                <div className="cs-hero-cta">
                   <Link
                     href={slide.cta.href}
-                    className="cs-btn-press inline-flex items-center rounded-lg bg-[#d4232a] px-8 py-4 text-sm font-bold uppercase tracking-wide text-white shadow-xl shadow-red-600/25 hover:shadow-red-600/40"
+                    className="cs-btn-press inline-flex items-center rounded-xl bg-[#d4232a] px-7 py-3.5 text-[13px] font-bold uppercase tracking-wide text-white shadow-xl shadow-red-600/20"
                   >
                     {slide.cta.label}
                   </Link>
@@ -67,27 +70,28 @@ export function HeroSlider() {
         </div>
       ))}
 
-      {/* Trust badges */}
-      <div className="cs-hero-badges absolute bottom-24 left-1/2 z-20 hidden -translate-x-1/2 items-center gap-4 md:flex">
-        <div className="flex items-center gap-2 rounded-full bg-[#d4232a] px-4 py-2 text-xs font-semibold text-white shadow-lg shadow-red-600/30">
-          <span className="text-sm">✓</span>
+      {/* Trust badges — 8px gap */}
+      <div className="cs-hero-badges absolute bottom-20 left-1/2 z-20 hidden -translate-x-1/2 items-center gap-3 md:flex">
+        <div className="flex items-center gap-2 rounded-full bg-[#d4232a] px-4 py-2 text-[11px] font-semibold text-white shadow-lg shadow-red-600/20">
+          <span className="text-xs">✓</span>
           Ücretsiz Ekspertiz
         </div>
-        <div className="flex items-center gap-2 rounded-full bg-[#2d2d2d] px-4 py-2 text-xs font-semibold text-white shadow-lg shadow-black/30">
-          <span className="text-sm">✓</span>
+        <div className="flex items-center gap-2 rounded-full bg-[#2d2d2d] px-4 py-2 text-[11px] font-semibold text-white shadow-lg shadow-black/20">
+          <span className="text-xs">✓</span>
           Tramer Kaydı Oluşmaz
         </div>
-        <div className="flex items-center gap-2 rounded-full bg-[#d4232a] px-4 py-2 text-xs font-semibold text-white shadow-lg shadow-red-600/30">
-          <span className="text-sm">✓</span>
+        <div className="flex items-center gap-2 rounded-full bg-[#d4232a] px-4 py-2 text-[11px] font-semibold text-white shadow-lg shadow-red-600/20">
+          <span className="text-xs">✓</span>
           Aynı Gün Teslim
         </div>
       </div>
 
+      {/* Nav arrows — consistent 48px */}
       <button
         type="button"
         aria-label="Önceki"
         onClick={() => go(-1)}
-        className="cs-btn-press absolute left-4 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-sm hover:bg-[#d4232a] md:left-8"
+        className="cs-btn-press absolute left-4 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/[.08] text-white/80 backdrop-blur-sm hover:bg-[#d4232a] hover:text-white md:left-6"
       >
         <ChevronLeftIcon className="h-5 w-5" />
       </button>
@@ -95,20 +99,21 @@ export function HeroSlider() {
         type="button"
         aria-label="Sonraki"
         onClick={() => go(1)}
-        className="cs-btn-press absolute right-4 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-sm hover:bg-[#d4232a] md:right-8"
+        className="cs-btn-press absolute right-4 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/[.08] text-white/80 backdrop-blur-sm hover:bg-[#d4232a] hover:text-white md:right-6"
       >
         <ChevronRightIcon className="h-5 w-5" />
       </button>
 
-      <div className="absolute bottom-10 left-1/2 z-20 flex -translate-x-1/2 gap-2.5 md:bottom-8">
+      {/* Dots — 32px from bottom */}
+      <div className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 gap-2">
         {HERO_SLIDES.map((s, i) => (
           <button
             key={s.title}
             type="button"
             aria-label={`${i + 1}. slayda git`}
             onClick={() => setIdx(i)}
-            className={`h-2 rounded-full transition-all duration-500 ${
-              i === idx ? "w-10 bg-[#d4232a]" : "w-2.5 bg-white/50 hover:bg-white/80"
+            className={`h-[6px] rounded-full transition-all duration-500 ${
+              i === idx ? "w-8 bg-[#d4232a]" : "w-[6px] bg-white/40 hover:bg-white/70"
             }`}
           />
         ))}
