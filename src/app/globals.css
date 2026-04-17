@@ -1,0 +1,293 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-roboto), "Roboto", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-dosis), "Dosis", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, monospace;
+
+  --color-cs-red: #d4232a;
+  --color-cs-red-hover: #b91c22;
+  --color-cs-graphite: #2d2d2d;
+  --color-cs-graphite-light: #3d3d3d;
+  --color-cs-graphite-muted: #4a4a4a;
+  --color-cs-navy: #0a1e3d;
+  --color-cs-navy-light: #1e3158;
+  --color-cs-text: #111827;
+  --color-cs-muted: #4b5563;
+  --color-cs-light: #6b7280;
+
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #111827;
+  --card: #ffffff;
+  --card-foreground: #111827;
+  --popover: #ffffff;
+  --popover-foreground: #111827;
+  --primary: #d4232a;
+  --primary-foreground: #ffffff;
+  --secondary: #0a1e3d;
+  --secondary-foreground: #ffffff;
+  --muted: #f8f9fb;
+  --muted-foreground: #4b5563;
+  --accent: #d4232a;
+  --accent-foreground: #ffffff;
+  --destructive: #d4232a;
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: #d4232a;
+  --radius: 0.375rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #111827;
+  --sidebar-primary: #d4232a;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f8f9fb;
+  --sidebar-accent-foreground: #111827;
+  --sidebar-border: #e5e7eb;
+  --sidebar-ring: #d4232a;
+  --chart-1: #d4232a;
+  --chart-2: #0a1e3d;
+  --chart-3: #1e3158;
+  --chart-4: #6b7280;
+  --chart-5: #4b5563;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    font-family: var(--font-roboto), "Roboto", system-ui, sans-serif;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    background: #ffffff;
+    color: #4b5563;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: #111827;
+    font-family: var(--font-roboto), "Roboto", system-ui, sans-serif;
+    letter-spacing: -0.01em;
+  }
+  h3 {
+    font-family: var(--font-dosis), "Dosis", system-ui, sans-serif;
+  }
+}
+
+/* ═══════════════════════════════════════
+   MOTION SYSTEM — Premium Animations
+   ═══════════════════════════════════════ */
+
+/* --- Scroll Reveal --- */
+.cs-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.cs-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.cs-reveal-delay-1 { transition-delay: 100ms; }
+.cs-reveal-delay-2 { transition-delay: 200ms; }
+.cs-reveal-delay-3 { transition-delay: 300ms; }
+.cs-reveal-delay-4 { transition-delay: 400ms; }
+
+/* --- Hero Entrance --- */
+@keyframes cs-hero-enter {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.cs-hero-badge   { animation: cs-hero-enter 0.5s cubic-bezier(0.16,1,0.3,1) 0.2s both; }
+.cs-hero-title   { animation: cs-hero-enter 0.6s cubic-bezier(0.16,1,0.3,1) 0.35s both; }
+.cs-hero-sub     { animation: cs-hero-enter 0.6s cubic-bezier(0.16,1,0.3,1) 0.5s both; }
+.cs-hero-cta     { animation: cs-hero-enter 0.5s cubic-bezier(0.16,1,0.3,1) 0.65s both; }
+.cs-hero-badges  { animation: cs-hero-enter 0.5s cubic-bezier(0.16,1,0.3,1) 0.8s both; }
+
+/* --- Hero Ken Burns (subtle zoom on background) --- */
+@keyframes cs-ken-burns {
+  0%   { transform: scale(1); }
+  100% { transform: scale(1.06); }
+}
+.cs-ken-burns {
+  animation: cs-ken-burns 8s ease-out forwards;
+}
+
+/* --- Button Press --- */
+.cs-btn-press {
+  transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cs-btn-press:hover {
+  transform: translateY(-2px) scale(1.03);
+}
+.cs-btn-press:active {
+  transform: translateY(0) scale(0.97);
+  transition-duration: 0.1s;
+}
+
+/* --- Card Lift --- */
+.cs-card-lift {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease;
+}
+.cs-card-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -12px rgba(0,0,0,0.1), 0 8px 16px -8px rgba(0,0,0,0.06);
+}
+
+/* --- Image Reveal (smooth zoom on hover) --- */
+.cs-img-reveal {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+.group:hover .cs-img-reveal {
+  transform: scale(1.08);
+}
+
+/* --- Section Divider Fade --- */
+.cs-section-fade {
+  position: relative;
+}
+.cs-section-fade::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d1d5db, transparent);
+}
+
+/* --- Floating Pulse (WhatsApp button) --- */
+@keyframes cs-pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+  70% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+.cs-pulse {
+  animation: cs-pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* --- Counter / Number --- */
+@keyframes cs-count-up {
+  from { opacity: 0; transform: translateY(10px) scale(0.95); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* --- Stagger children --- */
+.cs-stagger > *:nth-child(1) { transition-delay: 0ms; }
+.cs-stagger > *:nth-child(2) { transition-delay: 80ms; }
+.cs-stagger > *:nth-child(3) { transition-delay: 160ms; }
+.cs-stagger > *:nth-child(4) { transition-delay: 240ms; }
+.cs-stagger > *:nth-child(5) { transition-delay: 320ms; }
+
+/* --- Wiggle (Instagram) --- */
+@keyframes cs-wiggle {
+  0%, 86%, 100% { transform: rotate(0deg); }
+  88% { transform: rotate(-6deg); }
+  90% { transform: rotate(6deg); }
+  92% { transform: rotate(-5deg); }
+  94% { transform: rotate(5deg); }
+  96% { transform: rotate(-3deg); }
+  98% { transform: rotate(2deg); }
+}
+
+/* --- Existing Utilities --- */
+@keyframes cs-fade-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.cs-fade-in { animation: cs-fade-in 0.5s ease-out forwards; }
+
+@keyframes cs-slide-up {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.cs-slide-up { animation: cs-slide-up 0.6s cubic-bezier(0.16,1,0.3,1) forwards; }
+
+/* Hero gradient overlay */
+.cs-hero-overlay {
+  background: linear-gradient(160deg, rgba(10,30,61,0.7) 0%, rgba(0,0,0,0.5) 100%);
+}
+
+/* Decorative shape */
+.cs-shape-left::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: #d4232a;
+  border-radius: 2px;
+}
+
+/* Scrollbar hide */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+
+/* Glass header */
+.cs-header-glass {
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  background: rgba(255,255,255,0.92);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .cs-reveal { opacity: 1; transform: none; }
+}
