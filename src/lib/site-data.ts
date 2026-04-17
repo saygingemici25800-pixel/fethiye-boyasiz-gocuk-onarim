@@ -36,21 +36,21 @@ export const HERO_SLIDES: HeroSlide[] = [
     subtitle:
       "Aracınızdaki göçükleri boyasız, hızlı ve iz bırakmadan onarıyoruz. Orijinal boyanız korunur, aracınızın değeri düşmez.",
     cta: { label: "Ücretsiz Ekspertiz Al", href: "#iletisim" },
-    image: "/images/galeri-4.jpg",
+    image: "/images/dolu-sonrasi.jpeg",
   },
   {
     small: "İZ BIRAKMADAN DÜZELTME",
     title: "Fethiye'nin Güvenilir Adresi",
-    subtitle: "10 yılı aşkın tecrübeyle boyasız göçük onarımında Fethiye'nin tercih edilen markasıyız.",
-    cta: { label: "Hemen Ara", href: "tel:+905306485126" },
-    image: "/images/galeri-1.jpeg",
+    subtitle: "Profesyonel ekipman ve tecrübeyle boyasız göçük onarımında Fethiye'nin tercih edilen markasıyız.",
+    cta: { label: "Hemen Ara", href: "tel:+905353093972" },
+    image: "/images/gunes-sonrasi.jpeg",
   },
   {
     small: "YÜZLERCE MUTLU MÜŞTERİ",
     title: "Sonuçlarımız Ortada",
     subtitle: "Öncesi-sonrası fotoğraflarımızı inceleyin, farkı kendi gözlerinizle görün.",
-    cta: { label: "Referansları Gör", href: "#hizmetler" },
-    image: "/images/galeri-3-1024x678.jpg",
+    cta: { label: "Galerimizi İncele", href: "/galeri" },
+    image: "/images/ppf-kaplama.jpeg",
   },
 ];
 
@@ -104,27 +104,27 @@ export const PROCESS_STEPS: ProcessStep[] = [
 export const SERVICES: Service[] = [
   {
     title: "Boyasız Göçük Düzeltme",
-    image: "/images/edc133a5-549b-4416-9863-a653169cb7bf-e1634151869674.jpg",
+    image: "/images/boyasiz-sonrasi.jpeg",
     href: "/hizmetler/boyasiz-gocuk-duzeltme",
   },
   {
     title: "Dolu Hasarı Onarımı",
-    image: "/images/galeri-1.jpeg",
+    image: "/images/dolu-sonrasi.jpeg",
     href: "/hizmetler/dolu-hasari-onarimi",
   },
   {
     title: "Küçük & Orta Göçük",
-    image: "/images/galeri-3-1024x678.jpg",
+    image: "/images/mini-sonrasi.jpeg",
     href: "/hizmetler/kucuk-orta-gocuk-duzeltme",
   },
   {
     title: "Değer Kaybı Önleme",
-    image: "/images/man-polish-car-garage-1024x683.jpg",
+    image: "/images/gunes-sonrasi.jpeg",
     href: "/hizmetler/deger-kaybi-onleme",
   },
   {
     title: "Kaporta Göçük Onarımı",
-    image: "/images/car-wash-detailing-station-1024x683.jpg",
+    image: "/images/kaporta-boya-2.jpeg",
     href: "/hizmetler/kaporta-gocuk-onarimi",
   },
 ];
@@ -134,7 +134,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Boyasız Göçük Onarımı Nedir? Avantajları Nelerdir?",
     excerpt:
       "Boyasız göçük onarımı (PDR), aracınızın orijinal boyasına dokunmadan göçükleri düzeltme tekniğidir. Tramer kaydı oluşmaz, değer kaybı yaşanmaz.",
-    image: "/images/edc133a5-549b-4416-9863-a653169cb7bf-e1633336110858.jpg",
+    image: "/images/dolu-oncesi.jpeg",
     href: "/blog/boyasiz-gocuk-onarimi-nedir",
     date: "11 Nisan 2026",
   },
@@ -142,7 +142,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Dolu Hasarı Sonrası Ne Yapmalısınız?",
     excerpt:
       "Dolu yağışı sonrası aracınızda göçükler mi oluştu? Panik yapmayın. Doğru adımları atarak aracınızı en az hasarla kurtarabilirsiniz.",
-    image: "/images/galeri-4.jpg",
+    image: "/images/dolu-sonrasi.jpeg",
     href: "/blog/dolu-hasari-sonrasi-ne-yapmali",
     date: "8 Nisan 2026",
   },
@@ -150,7 +150,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Araç Satmadan Önce Göçük Onarımı Yaptırmalı mısınız?",
     excerpt:
       "Aracınızı satışa çıkarmadan önce göçükleri düzelttirmek, satış fiyatınızı ciddi oranda artırabilir. İşte bilmeniz gerekenler.",
-    image: "/images/man-polish-car-garage-1024x683.jpg",
+    image: "/images/rotus-sonrasi.jpeg",
     href: "/blog/arac-satmadan-once-gocuk-onarimi",
     date: "3 Nisan 2026",
   },
@@ -158,7 +158,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Boyasız mı Boyalı mı? Hangi Onarım Yöntemi Daha İyi?",
     excerpt:
       "Göçük onarımında boyasız ve boyalı yöntem arasındaki farkları, avantaj ve dezavantajlarını karşılaştırıyoruz.",
-    image: "/images/car-wash-detailing-station-1024x683.jpg",
+    image: "/images/kaporta-boya-2.jpeg",
     href: "/blog/boyasiz-mi-boyali-mi",
     date: "28 Mart 2026",
   },

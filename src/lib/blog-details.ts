@@ -22,7 +22,7 @@ export const BLOG_DETAILS: BlogDetail[] = [
     metaTitle: "Boyasız Göçük Onarımı (PDR) Nedir? | Fethiye Boyasız Göçük Onarım",
     metaDescription:
       "Boyasız göçük onarımı (PDR) nedir, nasıl yapılır, avantajları nelerdir? Orijinal boya korunur, tramer kaydı oluşmaz, aynı gün teslim. Fethiye'de profesyonel PDR hizmeti.",
-    heroImage: "/images/edc133a5-549b-4416-9863-a653169cb7bf-e1633336110858.jpg",
+    heroImage: "/images/dolu-oncesi.jpeg",
     date: "11 Nisan 2026",
     readTime: "5 dk okuma",
     intro:
@@ -64,7 +64,7 @@ export const BLOG_DETAILS: BlogDetail[] = [
     metaTitle: "Dolu Hasarı Sonrası Ne Yapmalı? | Fethiye Boyasız Göçük Onarım",
     metaDescription:
       "Dolu yağışı sonrası aracınızda göçük mü oluştu? Yapmanız gerekenleri, sigorta sürecini ve boyasız onarım avantajlarını anlatıyoruz.",
-    heroImage: "/images/galeri-4.jpg",
+    heroImage: "/images/dolu-sonrasi.jpeg",
     date: "8 Nisan 2026",
     readTime: "4 dk okuma",
     intro:
@@ -106,7 +106,7 @@ export const BLOG_DETAILS: BlogDetail[] = [
     metaTitle: "Araç Satışı Öncesi Göçük Onarımı | Fethiye Boyasız Göçük Onarım",
     metaDescription:
       "Aracınızı satmadan önce göçükleri düzelttirmeli misiniz? Boyasız onarımın satış fiyatına etkisi, tramer kaydı ve değer kaybı hakkında bilmeniz gerekenler.",
-    heroImage: "/images/man-polish-car-garage-1024x683.jpg",
+    heroImage: "/images/rotus-sonrasi.jpeg",
     date: "3 Nisan 2026",
     readTime: "4 dk okuma",
     intro:
@@ -148,7 +148,7 @@ export const BLOG_DETAILS: BlogDetail[] = [
     metaTitle: "Boyasız vs Boyalı Göçük Onarımı Karşılaştırma | Fethiye",
     metaDescription:
       "Boyasız ve boyalı göçük onarımı arasındaki farklar nelerdir? Maliyet, süre, kalite ve değer kaybı açısından detaylı karşılaştırma.",
-    heroImage: "/images/car-wash-detailing-station-1024x683.jpg",
+    heroImage: "/images/kaporta-boya-2.jpeg",
     date: "28 Mart 2026",
     readTime: "5 dk okuma",
     intro:

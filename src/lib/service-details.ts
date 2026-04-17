@@ -27,12 +27,12 @@ export const SERVICE_DETAILS: ServiceDetail[] = [
     metaTitle: "Boyasız Göçük Düzeltme | Fethiye Boyasız Göçük Onarım",
     metaDescription:
       "Fethiye'de boyasız göçük düzeltme hizmeti. PDR tekniği ile aracınızın orijinal boyasına dokunmadan göçükleri iz bırakmadan düzeltiyoruz. Ücretsiz ekspertiz için arayın.",
-    heroImage: "/images/edc133a5-549b-4416-9863-a653169cb7bf-e1634151869674.jpg",
+    heroImage: "/images/boyasiz-sonrasi.jpeg",
     galleryImages: [
-      "/images/galeri-4.jpg",
-      "/images/galeri-1.jpeg",
-      "/images/galeri-3-1024x678.jpg",
-      "/images/edc133a5-549b-4416-9863-a653169cb7bf-e1633336110858.jpg",
+      "/images/boyasiz-oncesi.jpeg",
+      "/images/boyasiz-sonrasi.jpeg",
+      "/images/mini-oncesi.jpeg",
+      "/images/mini-sonrasi.jpeg",
     ],
     shortDescription:
       "PDR (Paintless Dent Repair) tekniği ile aracınızın orijinal fabrika boyasına hiç dokunmadan göçükleri milimetrik hassasiyetle düzeltiyoruz.",
@@ -85,12 +85,12 @@ export const SERVICE_DETAILS: ServiceDetail[] = [
     metaTitle: "Dolu Hasarı Onarımı Fethiye | Boyasız Dolu Göçük Tamiri",
     metaDescription:
       "Fethiye'de dolu hasarı onarımı. Dolu kaynaklı göçükleri boyasız PDR yöntemiyle, aracınızın orijinal boyasını koruyarak onarıyoruz. Sigorta dosyası desteği sunuyoruz.",
-    heroImage: "/images/galeri-1.jpeg",
+    heroImage: "/images/dolu-sonrasi.jpeg",
     galleryImages: [
-      "/images/galeri-4.jpg",
-      "/images/galeri-3-1024x678.jpg",
-      "/images/edc133a5-549b-4416-9863-a653169cb7bf-e1634151869674.jpg",
-      "/images/man-polish-car-garage-1024x683.jpg",
+      "/images/dolu-oncesi.jpeg",
+      "/images/dolu-sonrasi.jpeg",
+      "/images/gunes-oncesi.jpeg",
+      "/images/gunes-sonrasi.jpeg",
     ],
     shortDescription:
       "Dolu yağışı sonrası aracınızda oluşan onlarca küçük göçüğü boyasız PDR yöntemiyle tek seferde, hızlı ve iz bırakmadan onarıyoruz.",
@@ -143,12 +143,12 @@ export const SERVICE_DETAILS: ServiceDetail[] = [
     metaTitle: "Küçük ve Orta Göçük Düzeltme Fethiye | Hızlı PDR Onarım",
     metaDescription:
       "Fethiye'de küçük ve orta boy göçük düzeltme. Park göçükleri, kapı çarpması ve günlük hasarları boyasız yöntemle aynı gün onarıyoruz.",
-    heroImage: "/images/galeri-3-1024x678.jpg",
+    heroImage: "/images/mini-sonrasi.jpeg",
     galleryImages: [
-      "/images/galeri-4.jpg",
-      "/images/galeri-1.jpeg",
-      "/images/edc133a5-549b-4416-9863-a653169cb7bf-e1634151869674.jpg",
-      "/images/car-wash-detailing-station-1024x683.jpg",
+      "/images/mini-oncesi.jpeg",
+      "/images/mini-sonrasi.jpeg",
+      "/images/rotus-oncesi.jpeg",
+      "/images/rotus-sonrasi.jpeg",
     ],
     shortDescription:
       "Park yerlerinde oluşan kapı çarpması, alışveriş arabası darbesi ve günlük küçük-orta boy göçükleri boyasız yöntemle aynı gün onarıyoruz.",
@@ -201,12 +201,12 @@ export const SERVICE_DETAILS: ServiceDetail[] = [
     metaTitle: "Araç Değer Kaybı Önleme | Fethiye Boyasız Göçük Onarım",
     metaDescription:
       "Aracınızın 2. el değerini koruyun. Fethiye'de boyasız göçük onarımı ile tramer kaydı oluşturmadan, değer kaybını önleyen profesyonel onarım hizmeti.",
-    heroImage: "/images/man-polish-car-garage-1024x683.jpg",
+    heroImage: "/images/gunes-sonrasi.jpeg",
     galleryImages: [
-      "/images/galeri-4.jpg",
-      "/images/galeri-1.jpeg",
-      "/images/galeri-3-1024x678.jpg",
-      "/images/edc133a5-549b-4416-9863-a653169cb7bf-e1634151869674.jpg",
+      "/images/gunes-oncesi.jpeg",
+      "/images/gunes-sonrasi.jpeg",
+      "/images/ppf-kaplama.jpeg",
+      "/images/dolu-sonrasi.jpeg",
     ],
     shortDescription:
       "Aracınızı satmadan önce veya göçük oluştuktan hemen sonra boyasız onarım yaptırarak tramer kaydından ve değer kaybından kaçının.",
@@ -259,12 +259,12 @@ export const SERVICE_DETAILS: ServiceDetail[] = [
     metaTitle: "Kaporta Göçük Onarımı Fethiye | Profesyonel PDR Hizmeti",
     metaDescription:
       "Fethiye'de kaporta göçük onarımı. Kaput, tavan, bagaj, kapı ve çamurluk göçüklerini boyasız PDR tekniğiyle profesyonelce onarıyoruz.",
-    heroImage: "/images/car-wash-detailing-station-1024x683.jpg",
+    heroImage: "/images/kaporta-boya-2.jpeg",
     galleryImages: [
-      "/images/galeri-4.jpg",
-      "/images/galeri-1.jpeg",
-      "/images/galeri-3-1024x678.jpg",
-      "/images/man-polish-car-garage-1024x683.jpg",
+      "/images/kaporta-boya-1.jpeg",
+      "/images/kaporta-boya-2.jpeg",
+      "/images/boyasiz-oncesi.jpeg",
+      "/images/boyasiz-sonrasi.jpeg",
     ],
     shortDescription:
       "Kaput, tavan, bagaj kapağı, kapılar ve çamurluklar dahil tüm kaporta yüzeylerindeki göçükleri boyasız PDR tekniğiyle profesyonelce onarıyoruz.",
