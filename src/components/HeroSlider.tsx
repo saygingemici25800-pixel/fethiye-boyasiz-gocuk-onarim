@@ -31,17 +31,18 @@ export function HeroSlider() {
           }`}
           aria-hidden={i !== idx}
         >
+          {/* Dark background behind image */}
+          <div className="absolute inset-0 bg-[#0a1e3d]" />
           <Image
             src={slide.image}
             alt={slide.title}
             fill
             priority={i === 0}
             sizes="100vw"
-            className={`object-cover object-center ${i === idx ? "cs-ken-burns" : ""}`}
+            className={`object-contain object-center ${i === idx ? "cs-ken-burns" : ""}`}
           />
-          {/* Richer multi-stop gradient */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a1e3d]/85 via-[#0a1e3d]/50 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+          {/* Gradients over image */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a1e3d]/90 via-[#0a1e3d]/60 to-[#0a1e3d]/30" />
 
           <div className="relative z-10 flex h-full items-center">
             {/* 8px grid: px-24/32, max-w consistent */}
@@ -50,7 +51,7 @@ export function HeroSlider() {
                 <p className="cs-hero-badge mb-4 inline-block rounded-full border border-white/15 bg-white/[.07] px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-white/80 backdrop-blur-sm md:text-xs">
                   {slide.small}
                 </p>
-                <h1 className="cs-hero-title mb-5 text-[36px] font-extrabold uppercase leading-[1.08] tracking-tight md:text-[48px] lg:text-[56px]">
+                <h1 className="cs-hero-title font-gambarino-bold mb-5 text-[36px] uppercase leading-[1.08] tracking-tight md:text-[48px] lg:text-[56px]">
                   {slide.title}
                 </h1>
                 <p className="cs-hero-sub mb-8 max-w-[480px] text-[15px] leading-[1.7] text-white/75 md:text-base">

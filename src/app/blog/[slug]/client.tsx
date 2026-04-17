@@ -109,7 +109,7 @@ export function BlogPageClient({ blog, otherBlogs, site }: Props) {
               <span className="mx-2">/</span>
               <span className="text-white/80">Makale</span>
             </nav>
-            <h1 className="text-2xl font-extrabold leading-snug text-white md:text-3xl lg:text-4xl">
+            <h1 className="font-gambarino-bold text-2xl leading-snug text-white md:text-3xl lg:text-4xl">
               {blog.title}
             </h1>
             <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-white/60">
@@ -141,7 +141,7 @@ export function BlogPageClient({ blog, otherBlogs, site }: Props) {
             {/* Sections */}
             {blog.sections.map((section, i) => (
               <div key={i} className="mb-10">
-                <h2 className="mb-4 text-xl font-extrabold text-[#111827] md:text-2xl">
+                <h2 className="font-gambarino mb-4 text-xl text-[#111827] md:text-2xl">
                   {section.title}
                 </h2>
                 <p className="text-base leading-[1.85] text-[#4b5563]">
@@ -158,7 +158,7 @@ export function BlogPageClient({ blog, otherBlogs, site }: Props) {
               <div className="mt-12 rounded-2xl bg-amber-50 border border-amber-100 p-8">
                 <div className="flex items-center gap-3 mb-5">
                   <LightbulbIcon className="h-6 w-6 text-amber-600" />
-                  <h2 className="text-xl font-extrabold text-[#111827]">Pratik İpuçları</h2>
+                  <h2 className="font-gambarino text-xl text-[#111827]">Pratik İpuçları</h2>
                 </div>
                 <ul className="space-y-3">
                   {blog.tips.map((tip, i) => (
@@ -175,7 +175,7 @@ export function BlogPageClient({ blog, otherBlogs, site }: Props) {
 
             {/* Conclusion */}
             <div className="mt-12 rounded-2xl bg-[#f8f9fb] p-8">
-              <h2 className="mb-4 text-xl font-extrabold text-[#111827]">Sonuç</h2>
+              <h2 className="font-gambarino mb-4 text-xl text-[#111827]">Sonuç</h2>
               <p className="text-base leading-[1.85] text-[#4b5563]">
                 {blog.conclusion}
               </p>
@@ -305,7 +305,7 @@ export function BlogPageClient({ blog, otherBlogs, site }: Props) {
       {/* Bottom CTA */}
       <section className="bg-gradient-to-r from-[#0a1e3d] to-[#1e3158] py-16">
         <div className="mx-auto max-w-[1200px] px-6 text-center lg:px-8">
-          <h2 className="text-2xl font-extrabold text-white md:text-3xl">
+          <h2 className="font-gambarino text-2xl text-white md:text-3xl">
             Aracınızdaki Göçükten Kurtulun
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-base text-white/70">

@@ -22,7 +22,7 @@ export function ContactSection() {
           <span className="mb-3 inline-block rounded-full bg-[#2d2d2d]/8 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#2d2d2d]">
             Bize Ulaşın
           </span>
-          <h2 className="mt-4 text-3xl font-extrabold text-[#111827] md:text-4xl">
+          <h2 className="font-gambarino mt-4 text-3xl text-[#111827] md:text-4xl">
             <span className="text-[#d4232a]">İletişim</span> Bilgilerimiz
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-[#4b5563]">

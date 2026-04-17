@@ -193,7 +193,7 @@ export function GalleryPageClient({ site }: Props) {
               <span className="mx-2">/</span>
               <span className="text-white">Galerimiz</span>
             </nav>
-            <h1 className="text-3xl font-extrabold text-white md:text-4xl lg:text-5xl">
+            <h1 className="font-gambarino-bold text-3xl text-white md:text-4xl lg:text-5xl">
               Galerimiz
             </h1>
             <p className="mt-3 max-w-lg text-base text-white/75">
@@ -230,7 +230,7 @@ export function GalleryPageClient({ site }: Props) {
                 <span className="mb-2 inline-block rounded-full bg-[#d4232a]/8 px-3 py-1 text-xs font-bold uppercase tracking-[0.15em] text-[#d4232a]">
                   {String(gIdx + 1).padStart(2, "0")}
                 </span>
-                <h2 className="mt-2 text-2xl font-extrabold text-[#111827] md:text-3xl">
+                <h2 className="font-gambarino mt-2 text-2xl text-[#111827] md:text-3xl">
                   {group.title}
                 </h2>
                 <p className="mt-2 text-sm text-[#4b5563]">{group.description}</p>
@@ -309,7 +309,7 @@ export function GalleryPageClient({ site }: Props) {
       {/* Bottom CTA */}
       <section className="bg-gradient-to-r from-[#0a1e3d] to-[#1e3158] py-16">
         <div className="mx-auto max-w-[1200px] px-6 text-center lg:px-8">
-          <h2 className="text-2xl font-extrabold text-white md:text-3xl">
+          <h2 className="font-gambarino text-2xl text-white md:text-3xl">
             Aracınızdaki Göçükten Kurtulun
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-base text-white/70">

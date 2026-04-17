@@ -8,7 +8,7 @@ export default function NotFound() {
         <p className="mb-4 text-[80px] font-black leading-none text-[#2d2d2d]/10 md:text-[120px]">
           404
         </p>
-        <h1 className="mb-3 text-2xl font-extrabold text-[#111827] md:text-3xl">
+        <h1 className="font-gambarino mb-3 text-2xl text-[#111827] md:text-3xl">
           Sayfa Bulunamadı
         </h1>
         <p className="mb-8 text-[15px] leading-relaxed text-[#6b7280]">

@@ -99,6 +99,17 @@
   * {
     @apply border-border outline-ring/50;
   }
+
+  /* ═══ Gambarino Font Family ═══ */
+  @font-face {
+    font-family: 'Gambarino';
+    src: url('/fonts/Gambarino-Regular.woff2') format('woff2'),
+         url('/fonts/Gambarino-Regular.woff') format('woff');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+
   html {
     font-family: var(--font-roboto), "Roboto", system-ui, sans-serif;
     scroll-behavior: smooth;
@@ -111,14 +122,36 @@
     font-size: 16px;
     line-height: 1.65;
   }
-  h1, h2, h3, h4, h5, h6 {
+
+  /* --- DISPLAY: Gambarino — Hero H1, Section H2 --- */
+  h1, h2 {
+    color: #111827;
+    font-family: 'Gambarino', Georgia, 'Times New Roman', serif;
+    letter-spacing: -0.02em;
+  }
+
+  /* --- UI: Roboto Bold — Kart başlıkları, nav, butonlar --- */
+  h3, h4, h5, h6 {
     color: #111827;
     font-family: var(--font-roboto), "Roboto", system-ui, sans-serif;
     letter-spacing: -0.01em;
   }
-  h3 {
-    font-family: var(--font-dosis), "Dosis", system-ui, sans-serif;
-  }
+}
+
+/* --- Gambarino Ağırlık Varyasyonları --- */
+/* Light: ince, zarif — alt başlıklar, badge'lar */
+.font-gambarino { font-family: 'Gambarino', Georgia, 'Times New Roman', serif; }
+.font-gambarino-light {
+  font-family: 'Gambarino', Georgia, 'Times New Roman', serif;
+  -webkit-text-stroke: 0;
+  font-weight: 400;
+  opacity: 0.85;
+}
+/* Bold: kalın, güçlü — hero başlıklar */
+.font-gambarino-bold {
+  font-family: 'Gambarino', Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  -webkit-text-stroke: 0.5px currentColor;
 }
 
 /* ═══════════════════════════════════════

@@ -118,7 +118,7 @@ export function ServicePageClient({ service, otherServices, site }: Props) {
               <span className="mx-2">/</span>
               <span className="text-white">{service.title}</span>
             </nav>
-            <h1 className="text-3xl font-extrabold text-white md:text-4xl lg:text-5xl">
+            <h1 className="font-gambarino-bold text-3xl text-white md:text-4xl lg:text-5xl">
               {service.title}
             </h1>
             <p className="mt-4 max-w-2xl text-base text-white/80 md:text-lg">
@@ -164,7 +164,7 @@ export function ServicePageClient({ service, otherServices, site }: Props) {
           <div className="lg:col-span-2">
             {service.sections.map((section, i) => (
               <article key={i} className="mb-12">
-                <h2 className="mb-4 text-2xl font-extrabold text-[#111827] md:text-3xl">
+                <h2 className="font-gambarino mb-4 text-2xl text-[#111827] md:text-3xl">
                   {section.title}
                 </h2>
                 <p className="text-base leading-[1.8] text-[#4b5563]">
@@ -178,7 +178,7 @@ export function ServicePageClient({ service, otherServices, site }: Props) {
 
             {/* Benefits */}
             <div className="mt-12 rounded-2xl bg-[#f8f9fb] p-8 md:p-10">
-              <h2 className="mb-6 text-2xl font-extrabold text-[#111827]">
+              <h2 className="font-gambarino mb-6 text-2xl text-[#111827]">
                 Avantajları
               </h2>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -193,7 +193,7 @@ export function ServicePageClient({ service, otherServices, site }: Props) {
 
             {/* Gallery */}
             <div className="mt-16">
-              <h2 className="mb-6 text-2xl font-extrabold text-[#111827]">
+              <h2 className="font-gambarino mb-6 text-2xl text-[#111827]">
                 Galeri
               </h2>
               <div className="relative overflow-hidden rounded-2xl">
@@ -252,7 +252,7 @@ export function ServicePageClient({ service, otherServices, site }: Props) {
 
             {/* Video Placeholder */}
             <div className="mt-16">
-              <h2 className="mb-6 text-2xl font-extrabold text-[#111827]">
+              <h2 className="font-gambarino mb-6 text-2xl text-[#111827]">
                 Video
               </h2>
               <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded-2xl bg-[#0a1e3d]">
@@ -279,7 +279,7 @@ export function ServicePageClient({ service, otherServices, site }: Props) {
 
             {/* FAQ */}
             <div className="mt-16">
-              <h2 className="mb-6 text-2xl font-extrabold text-[#111827]">
+              <h2 className="font-gambarino mb-6 text-2xl text-[#111827]">
                 Sık Sorulan Sorular
               </h2>
               <div className="space-y-3">
@@ -417,7 +417,7 @@ export function ServicePageClient({ service, otherServices, site }: Props) {
       {/* Bottom CTA */}
       <section className="bg-gradient-to-r from-[#0a1e3d] to-[#1e3158] py-16">
         <div className="mx-auto max-w-[1200px] px-6 text-center lg:px-8">
-          <h2 className="text-2xl font-extrabold text-white md:text-3xl">
+          <h2 className="font-gambarino text-2xl text-white md:text-3xl">
             Aracınızdaki Göçükten Kurtulun
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-base text-white/70">
