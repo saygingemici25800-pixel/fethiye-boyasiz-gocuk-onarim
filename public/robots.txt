@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fethiyeboyasizgocukonarim.com/sitemap.xml
+Sitemap: https://www.fethiyeboyasizgocukonarim.com/sitemap.xml

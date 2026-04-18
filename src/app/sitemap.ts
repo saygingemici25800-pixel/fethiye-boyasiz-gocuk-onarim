@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { SERVICE_DETAILS } from "@/lib/service-details";
 import { BLOG_DETAILS } from "@/lib/blog-details";
 
-const BASE = "https://fethiyeboyasizgocukonarim.com";
+const BASE = "https://www.fethiyeboyasizgocukonarim.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date().toISOString();

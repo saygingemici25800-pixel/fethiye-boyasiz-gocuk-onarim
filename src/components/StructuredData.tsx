@@ -7,7 +7,7 @@ export function StructuredData() {
     name: SITE.brand,
     description:
       "Fethiye'de boyasız göçük onarım hizmeti. Aracınızdaki göçükleri boyasız, hızlı ve iz bırakmadan onarıyoruz.",
-    url: "https://fethiyeboyasizgocukonarim.com",
+    url: "https://www.fethiyeboyasizgocukonarim.com",
     telephone: "+905353093972",
     address: {
       "@type": "PostalAddress",
@@ -32,7 +32,7 @@ export function StructuredData() {
     ],
     sameAs: ["https://www.instagram.com/fethiye.boyasiz.gocuk"],
     priceRange: "$$",
-    image: "https://fethiyeboyasizgocukonarim.com/images/fethiye-logo.png",
+    image: "https://www.fethiyeboyasizgocukonarim.com/images/fethiye-logo.png",
     areaServed: {
       "@type": "City",
       name: "Fethiye",

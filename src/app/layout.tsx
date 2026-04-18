@@ -15,7 +15,7 @@ const dosis = Dosis({
   subsets: ["latin", "latin-ext"],
 });
 
-const BASE_URL = "https://fethiyeboyasizgocukonarim.com";
+const BASE_URL = "https://www.fethiyeboyasizgocukonarim.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
