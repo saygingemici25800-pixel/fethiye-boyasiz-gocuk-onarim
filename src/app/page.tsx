@@ -1,5 +1,7 @@
+import { BeforeAfterGallery } from "@/components/BeforeAfterGallery";
 import { BlogSection } from "@/components/BlogSection";
 import { ContactSection } from "@/components/ContactSection";
+import { ExtraServicesSection } from "@/components/ExtraServicesSection";
 import { FeaturesSection } from "@/components/FeaturesSection";
 import { FloatingActions } from "@/components/FloatingActions";
 import { Footer } from "@/components/Footer";
@@ -14,9 +16,11 @@ export default function Home() {
       <Header />
       <main className="flex-1 pb-16 md:pb-0">
         <HeroSlider />
+        <BeforeAfterGallery />
+        <ServicesSection />
+        <ExtraServicesSection />
         <FeaturesSection />
         <ProcessSection />
-        <ServicesSection />
         <BlogSection />
         <ContactSection />
       </main>
