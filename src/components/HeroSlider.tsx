@@ -51,7 +51,7 @@ export function HeroSlider() {
                 <p className="cs-hero-badge mb-4 inline-block rounded-full border border-white/15 bg-white/[.07] px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-white/80 backdrop-blur-sm md:text-xs">
                   {slide.small}
                 </p>
-                <h1 className="cs-hero-title font-gambarino-bold mb-5 text-[36px] uppercase leading-[1.08] tracking-tight md:text-[48px] lg:text-[56px]">
+                <h1 className="cs-hero-title font-gambarino-bold mb-5 text-[36px] uppercase leading-[1.08] tracking-tight text-white md:text-[48px] lg:text-[56px]">
                   {slide.title}
                 </h1>
                 <p className="cs-hero-sub mb-8 max-w-[480px] text-[15px] leading-[1.7] text-white/75 md:text-base">

@@ -125,14 +125,12 @@
 
   /* --- DISPLAY: Gambarino — Hero H1, Section H2 --- */
   h1, h2 {
-    color: #111827;
     font-family: 'Gambarino', Georgia, 'Times New Roman', serif;
     letter-spacing: -0.02em;
   }
 
   /* --- UI: Roboto Bold — Kart başlıkları, nav, butonlar --- */
   h3, h4, h5, h6 {
-    color: #111827;
     font-family: var(--font-roboto), "Roboto", system-ui, sans-serif;
     letter-spacing: -0.01em;
   }
