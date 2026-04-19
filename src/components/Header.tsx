@@ -55,14 +55,15 @@ export function Header() {
             href={SITE.social.instagram}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Instagram"
-            className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#d4232a] text-white shadow-lg shadow-red-500/20 transition-all hover:bg-[#b91c22] hover:scale-110"
+            aria-label="Instagram sayfamız"
+            className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-[#f09433] via-[#e6683c] to-[#dc2743] text-white shadow-md shadow-orange-500/20 transition-all hover:scale-105 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d4232a]"
           >
             <InstagramIcon className="h-5 w-5" />
           </a>
           <a
             href={SITE.phoneHref}
-            className="flex items-center gap-2 rounded-lg bg-[#d4232a] px-5 py-3 text-sm font-bold uppercase text-white whitespace-nowrap shadow-lg shadow-red-500/20 transition-all hover:bg-[#b91c22] hover:shadow-red-500/30 hover:-translate-y-0.5"
+            aria-label={`Telefon ile ara: ${SITE.phone}`}
+            className="flex items-center gap-2 rounded-lg bg-[#d4232a] px-5 py-3 text-sm font-bold uppercase text-white whitespace-nowrap shadow-lg shadow-red-500/20 transition-all hover:bg-[#b91c22] hover:shadow-red-500/30 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d4232a]"
           >
             <PhoneIcon className="h-4 w-4" />
             {SITE.phone}
@@ -71,25 +72,26 @@ export function Header() {
 
         <button
           type="button"
-          aria-label="Menüyü aç"
+          aria-label={open ? "Menüyü kapat" : "Menüyü aç"}
           aria-expanded={open}
+          aria-controls="mobile-nav"
           onClick={() => setOpen((v) => !v)}
-          className="flex h-10 w-10 items-center justify-center rounded-lg text-[#111827] hover:bg-gray-100 transition-colors lg:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-lg text-[#111827] hover:bg-gray-100 transition-colors lg:hidden focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d4232a]"
         >
           {open ? <CloseIcon className="h-5 w-5" /> : <MenuIcon className="h-6 w-6" />}
         </button>
       </div>
 
       {open && (
-        <div className="border-t border-gray-100 bg-white lg:hidden">
-          <nav className="mx-auto max-w-[1200px] px-4 py-2">
+        <div id="mobile-nav" className="border-t border-gray-100 bg-white lg:hidden cs-fade-in">
+          <nav className="mx-auto max-w-[1200px] px-4 py-2" aria-label="Mobil menü">
             <ul className="flex flex-col">
               {NAV.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="block border-b border-gray-50 py-3.5 text-sm font-semibold uppercase tracking-wide text-[#111827] transition-colors hover:text-[#d4232a]"
+                    className="block border-b border-gray-50 py-3.5 text-sm font-semibold uppercase tracking-wide text-[#111827] transition-colors hover:text-[#d4232a] focus-visible:text-[#d4232a]"
                   >
                     {link.label}
                   </Link>
@@ -98,7 +100,7 @@ export function Header() {
               <li className="py-4">
                 <a
                   href={SITE.phoneHref}
-                  className="flex items-center justify-center gap-2 rounded-lg bg-[#d4232a] px-5 py-3.5 text-sm font-bold uppercase text-white shadow-lg"
+                  className="flex items-center justify-center gap-2 rounded-lg bg-[#d4232a] px-5 py-3.5 text-sm font-bold uppercase text-white shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d4232a]"
                 >
                   <PhoneIcon className="h-4 w-4" />
                   {SITE.phone}

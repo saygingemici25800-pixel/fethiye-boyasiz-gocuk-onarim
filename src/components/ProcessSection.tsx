@@ -24,7 +24,7 @@ export function ProcessSection() {
           <h2 className="font-gambarino mt-3 text-[28px] leading-tight text-[#111827] md:text-[36px]">
             Nasıl <span className="text-[#d4232a]">Çalışıyoruz</span>?
           </h2>
-          <p className="mx-auto mt-4 max-w-md text-[15px] leading-relaxed text-[#6b7280]">
+          <p className="mx-auto mt-4 max-w-md text-[15px] leading-relaxed text-[#4b5563]">
             Aracınızı bırakın, biz halledelim. Süreç tamamen şeffaf.
           </p>
         </div>
@@ -63,7 +63,7 @@ export function ProcessSection() {
                 <h3 className={`relative mb-2 text-lg font-bold ${isHL ? "text-white" : "text-[#111827]"}`}>
                   {step.title}
                 </h3>
-                <p className={`relative text-[13px] leading-relaxed ${isHL ? "text-white/70" : "text-[#6b7280]"}`}>
+                <p className={`relative text-[13px] leading-relaxed ${isHL ? "text-white/85" : "text-[#4b5563]"}`}>
                   {step.description}
                 </p>
               </div>

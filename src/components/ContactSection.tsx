@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  ArrowRightIcon,
   ClockIcon,
   MapPinIcon,
   PhoneIcon,
@@ -25,7 +26,7 @@ export function ContactSection() {
           <h2 className="font-gambarino mt-3 text-[28px] leading-tight text-[#111827] md:text-[36px]">
             <span className="text-[#d4232a]">İletişim</span> Bilgilerimiz
           </h2>
-          <p className="mx-auto mt-4 max-w-md text-[15px] leading-relaxed text-[#6b7280]">
+          <p className="mx-auto mt-4 max-w-md text-[15px] leading-relaxed text-[#4b5563]">
             Ücretsiz ekspertiz randevusu almak veya fiyat bilgisi öğrenmek için bize ulaşın.
           </p>
         </div>
@@ -50,10 +51,11 @@ export function ContactSection() {
               href={MAPS_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-3 inline-flex items-center gap-2 text-[13px] font-semibold text-[#d4232a] transition-colors hover:text-[#b91c22]"
+              className="group mt-3 inline-flex items-center gap-2 rounded-md px-1 py-1 text-[13px] font-semibold text-[#d4232a] transition-colors hover:text-[#b91c22] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d4232a]"
             >
-              <MapPinIcon className="h-4 w-4" />
-              Google Maps&apos;te Aç →
+              <MapPinIcon className="h-4 w-4" aria-hidden />
+              Google Maps&apos;te Aç
+              <ArrowRightIcon className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden />
             </a>
           </div>
 
@@ -66,7 +68,7 @@ export function ContactSection() {
                 </span>
                 <div>
                   <h3 className="mb-1.5 text-[15px] font-bold text-[#111827]">Adresimiz</h3>
-                  <p className="text-[13px] leading-relaxed text-[#6b7280]">
+                  <p className="text-[13px] leading-relaxed text-[#4b5563]">
                     Taşyaka, 261. Sk. No:21
                     <br />
                     48300 Fethiye / Muğla
@@ -86,7 +88,7 @@ export function ContactSection() {
                       {SITE.phone}
                     </a>
                   </h3>
-                  <p className="text-[13px] leading-relaxed text-[#6b7280]">
+                  <p className="text-[13px] leading-relaxed text-[#4b5563]">
                     Pzt — Cmt: 08:30 — 18:00
                   </p>
                 </div>
@@ -109,8 +111,8 @@ export function ContactSection() {
                       WhatsApp Hattı
                     </a>
                   </h3>
-                  <p className="flex items-center gap-1.5 text-[13px] leading-relaxed text-[#6b7280]">
-                    <ClockIcon className="h-3.5 w-3.5 text-[#6b7280]" />
+                  <p className="flex items-center gap-1.5 text-[13px] leading-relaxed text-[#4b5563]">
+                    <ClockIcon className="h-3.5 w-3.5 text-[#4b5563]" />
                     7/24 mesaj atabilirsiniz
                   </p>
                 </div>
@@ -120,9 +122,10 @@ export function ContactSection() {
             {/* CTA */}
             <a
               href={SITE.phoneHref}
-              className="cs-btn-press cs-reveal cs-reveal-delay-4 flex items-center justify-center gap-2 rounded-xl bg-[#d4232a] px-7 py-3.5 text-[13px] font-bold uppercase tracking-wide text-white shadow-xl shadow-red-600/20"
+              aria-label={`Telefon ile ara: ${SITE.phone}`}
+              className="cs-btn-press cs-reveal cs-reveal-delay-4 flex items-center justify-center gap-2 rounded-xl bg-[#d4232a] px-7 py-3.5 text-[13px] font-bold uppercase tracking-wide text-white shadow-xl shadow-red-600/20 hover:bg-[#b91c22] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d4232a]"
             >
-              <PhoneIcon className="h-4 w-4" />
+              <PhoneIcon className="h-4 w-4" aria-hidden />
               Hemen Ara: {SITE.phone}
             </a>
           </div>

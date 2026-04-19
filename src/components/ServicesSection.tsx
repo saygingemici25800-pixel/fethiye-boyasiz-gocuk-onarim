@@ -35,7 +35,7 @@ export function ServicesSection() {
             <h2 className="font-gambarino mt-3 text-[28px] leading-tight text-white md:text-[36px]">
               Hizmetlerimiz
             </h2>
-            <p className="mx-auto mt-4 max-w-md text-[15px] leading-relaxed text-white/70">
+            <p className="mx-auto mt-4 max-w-md text-[15px] leading-relaxed text-white/85">
               Her göçük tipi için uzman çözümler sunuyoruz.
             </p>
           </div>
@@ -54,7 +54,8 @@ export function ServicesSection() {
                 key={s.title}
                 href={s.href}
                 data-card
-                className="group relative w-[260px] shrink-0 snap-start overflow-hidden rounded-2xl bg-white shadow-lg shadow-black/[.06] transition-all duration-400 hover:-translate-y-1.5 hover:shadow-xl sm:w-[280px] md:w-[320px]"
+                aria-label={`${s.title} — Detay`}
+                className="group relative w-[260px] shrink-0 snap-start overflow-hidden rounded-2xl bg-white shadow-lg shadow-black/[.06] transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d4232a] sm:w-[280px] md:w-[320px]"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
@@ -83,7 +84,7 @@ export function ServicesSection() {
             type="button"
             aria-label="Önceki hizmet"
             onClick={() => scrollBy(-1)}
-            className="cs-btn-press absolute -left-3 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#111827] shadow-lg hover:bg-[#d4232a] hover:text-white md:-left-5"
+            className="cs-btn-press absolute -left-3 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#111827] shadow-lg ring-1 ring-black/5 transition-colors hover:bg-[#d4232a] hover:text-white hover:ring-transparent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d4232a] md:-left-5"
           >
             <ChevronLeftIcon className="h-4 w-4" />
           </button>
@@ -91,7 +92,7 @@ export function ServicesSection() {
             type="button"
             aria-label="Sonraki hizmet"
             onClick={() => scrollBy(1)}
-            className="cs-btn-press absolute -right-3 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#111827] shadow-lg hover:bg-[#d4232a] hover:text-white md:-right-5"
+            className="cs-btn-press absolute -right-3 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#111827] shadow-lg ring-1 ring-black/5 transition-colors hover:bg-[#d4232a] hover:text-white hover:ring-transparent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d4232a] md:-right-5"
           >
             <ChevronRightIcon className="h-4 w-4" />
           </button>

@@ -64,8 +64,11 @@ export function BlogPageClient({ blog, otherBlogs, site }: Props) {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-100 bg-white/95 backdrop-blur-md">
         <div className="mx-auto flex max-w-[1200px] items-center justify-between px-4 py-3 lg:px-8">
-          <Link href="/" className="flex items-center gap-3 text-sm font-semibold text-[#111827] transition-colors hover:text-[#d4232a]">
-            <ArrowLeftIcon className="h-4 w-4" />
+          <Link
+            href="/"
+            className="flex items-center gap-2 rounded-md px-1 py-1 text-sm font-semibold text-[#111827] transition-colors hover:text-[#d4232a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d4232a]"
+          >
+            <ArrowLeftIcon className="h-4 w-4" aria-hidden />
             Ana Sayfa
           </Link>
           <div className="flex items-center gap-3">
@@ -73,16 +76,16 @@ export function BlogPageClient({ blog, otherBlogs, site }: Props) {
               href={site.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[#f09433] via-[#e6683c] to-[#dc2743] text-white shadow-md transition-all hover:scale-110"
-              aria-label="Instagram"
+              className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[#f09433] via-[#e6683c] to-[#dc2743] text-white shadow-md transition-all hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d4232a]"
+              aria-label="Instagram sayfamız"
             >
-              <InstagramIcon className="h-5 w-5" />
+              <InstagramIcon className="h-5 w-5" aria-hidden />
             </a>
             <a
               href={site.phoneHref}
-              className="flex items-center gap-2 rounded-xl bg-[#d4232a] px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-red-500/20 transition-all hover:bg-[#b91c22] hover:-translate-y-0.5 whitespace-nowrap"
+              className="flex items-center gap-2 rounded-xl bg-[#d4232a] px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-red-500/20 transition-all hover:bg-[#b91c22] hover:-translate-y-0.5 whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d4232a]"
             >
-              <PhoneIcon className="h-4 w-4" />
+              <PhoneIcon className="h-4 w-4" aria-hidden />
               Hemen Ara
             </a>
           </div>
@@ -102,23 +105,23 @@ export function BlogPageClient({ blog, otherBlogs, site }: Props) {
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a1e3d]/90 via-[#0a1e3d]/50 to-transparent" />
         <div className="relative z-10 flex h-full items-end pb-12">
           <div className="mx-auto w-full max-w-[800px] px-6 lg:px-8">
-            <nav className="mb-4 text-sm text-white/60">
-              <Link href="/" className="hover:text-white transition-colors">Anasayfa</Link>
-              <span className="mx-2">/</span>
-              <Link href="/#blog" className="hover:text-white transition-colors">Blog</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white/80">Makale</span>
+            <nav aria-label="Breadcrumb" className="mb-4 text-sm text-white/80">
+              <Link href="/" className="rounded hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Anasayfa</Link>
+              <span className="mx-2" aria-hidden>/</span>
+              <Link href="/#blog" className="rounded hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Blog</Link>
+              <span className="mx-2" aria-hidden>/</span>
+              <span className="text-white" aria-current="page">Makale</span>
             </nav>
             <h1 className="font-gambarino-bold text-2xl leading-snug text-white md:text-3xl lg:text-4xl">
               {blog.title}
             </h1>
-            <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-white/60">
+            <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-white/85">
               <span className="flex items-center gap-1.5">
-                <CalendarIcon className="h-4 w-4" />
-                {blog.date}
+                <CalendarIcon className="h-4 w-4" aria-hidden />
+                <time>{blog.date}</time>
               </span>
               <span className="flex items-center gap-1.5">
-                <ClockSmallIcon className="h-4 w-4" />
+                <ClockSmallIcon className="h-4 w-4" aria-hidden />
                 {blog.readTime}
               </span>
             </div>
@@ -182,31 +185,34 @@ export function BlogPageClient({ blog, otherBlogs, site }: Props) {
             </div>
 
             {/* Share / CTA */}
-            <div className="mt-12 flex flex-wrap items-center gap-4 rounded-2xl border border-gray-100 p-6">
+            <div className="mt-12 flex flex-wrap items-center gap-4 rounded-2xl border border-gray-100 bg-[#f8f9fb] p-6">
               <p className="text-sm font-semibold text-[#111827]">Bu yazı faydalı olduysa:</p>
               <a
                 href={site.phoneHref}
-                className="inline-flex items-center gap-2 rounded-xl bg-[#d4232a] px-5 py-2.5 text-sm font-bold text-white transition-all hover:bg-[#b91c22]"
+                aria-label={`Telefon ile ara: ${site.phone}`}
+                className="cs-btn-press inline-flex items-center gap-2 rounded-xl bg-[#d4232a] px-5 py-2.5 text-sm font-bold text-white transition-all hover:bg-[#b91c22] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d4232a]"
               >
-                <PhoneIcon className="h-4 w-4" />
+                <PhoneIcon className="h-4 w-4" aria-hidden />
                 Bizi Arayın
               </a>
               <a
                 href={site.whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-5 py-2.5 text-sm font-bold text-white transition-all hover:bg-[#20bd5a]"
+                aria-label="WhatsApp ile iletişim"
+                className="cs-btn-press inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-5 py-2.5 text-sm font-bold text-white transition-all hover:bg-[#20bd5a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25D366]"
               >
-                <WhatsAppIcon className="h-4 w-4" />
+                <WhatsAppIcon className="h-4 w-4" aria-hidden />
                 WhatsApp
               </a>
               <a
                 href={site.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#f09433] via-[#e6683c] to-[#dc2743] px-5 py-2.5 text-sm font-bold text-white transition-all"
+                aria-label="Instagram sayfamız"
+                className="cs-btn-press inline-flex items-center gap-2 rounded-xl bg-gradient-to-br from-[#f09433] via-[#e6683c] to-[#dc2743] px-5 py-2.5 text-sm font-bold text-white transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d4232a]"
               >
-                <InstagramIcon className="h-4 w-4" />
+                <InstagramIcon className="h-4 w-4" aria-hidden />
                 Takip Et
               </a>
             </div>
@@ -216,35 +222,38 @@ export function BlogPageClient({ blog, otherBlogs, site }: Props) {
           <aside className="lg:col-span-1">
             <div className="sticky top-[80px] space-y-6">
               {/* Contact Card */}
-              <div className="rounded-2xl bg-gradient-to-br from-[#0a1e3d] to-[#1e3158] p-8 text-white">
+              <div className="rounded-2xl bg-gradient-to-br from-[#0a1e3d] to-[#1e3158] p-8 text-white shadow-xl shadow-[#0a1e3d]/20">
                 <h3 className="mb-2 text-lg font-bold">Ücretsiz Ekspertiz</h3>
-                <p className="mb-6 text-sm text-white/70">
+                <p className="mb-6 text-sm text-white/85">
                   Göçüğünüzün fotoğrafını gönderin, hemen fiyat bilgisi alalım.
                 </p>
                 <div className="space-y-3">
                   <a
                     href={site.phoneHref}
-                    className="flex items-center justify-center gap-2 rounded-xl bg-[#d4232a] py-3.5 text-sm font-bold text-white shadow-lg shadow-red-600/25 transition-all hover:bg-[#b91c22] hover:-translate-y-0.5"
+                    aria-label={`Telefon ile ara: ${site.phone}`}
+                    className="cs-btn-press flex items-center justify-center gap-2 rounded-xl bg-[#d4232a] py-3.5 text-sm font-bold text-white shadow-lg shadow-red-600/25 transition-all hover:bg-[#b91c22] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                   >
-                    <PhoneIcon className="h-4 w-4" />
+                    <PhoneIcon className="h-4 w-4" aria-hidden />
                     {site.phone}
                   </a>
                   <a
                     href={site.whatsappHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 rounded-xl bg-[#25D366] py-3.5 text-sm font-bold text-white transition-all hover:bg-[#20bd5a] hover:-translate-y-0.5"
+                    aria-label="WhatsApp ile iletişim"
+                    className="cs-btn-press flex items-center justify-center gap-2 rounded-xl bg-[#25D366] py-3.5 text-sm font-bold text-white transition-all hover:bg-[#20bd5a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                   >
-                    <WhatsAppIcon className="h-4 w-4" />
+                    <WhatsAppIcon className="h-4 w-4" aria-hidden />
                     WhatsApp ile Yaz
                   </a>
                   <a
                     href={site.social.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#f09433] via-[#e6683c] to-[#dc2743] py-3.5 text-sm font-bold text-white transition-all hover:-translate-y-0.5"
+                    aria-label="Instagram sayfamız"
+                    className="cs-btn-press flex items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-[#f09433] via-[#e6683c] to-[#dc2743] py-3.5 text-sm font-bold text-white transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                   >
-                    <InstagramIcon className="h-4 w-4" />
+                    <InstagramIcon className="h-4 w-4" aria-hidden />
                     Instagram
                   </a>
                 </div>
@@ -260,22 +269,23 @@ export function BlogPageClient({ blog, otherBlogs, site }: Props) {
                     <Link
                       key={b.slug}
                       href={`/blog/${b.slug}`}
-                      className="group flex items-start gap-4 rounded-xl border border-gray-50 p-3 transition-all hover:border-[#d4232a]/20 hover:bg-[#fef2f2]"
+                      className="group flex items-start gap-4 rounded-xl border border-gray-50 p-3 transition-all hover:border-[#d4232a]/20 hover:bg-[#fef2f2] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d4232a]"
                     >
                       <div className="relative h-16 w-20 shrink-0 overflow-hidden rounded-lg">
                         <Image
                           src={b.heroImage}
-                          alt={b.title}
+                          alt=""
+                          aria-hidden
                           fill
                           sizes="80px"
-                          className="object-cover"
+                          className="object-cover transition-transform duration-500 group-hover:scale-110"
                         />
                       </div>
                       <div className="flex-1 min-w-0">
                         <p className="text-sm font-semibold leading-snug text-[#111827] transition-colors group-hover:text-[#d4232a] line-clamp-2">
                           {b.title}
                         </p>
-                        <p className="mt-1 text-xs text-[#6b7280]">{b.date}</p>
+                        <p className="mt-1 text-xs text-[#4b5563]">{b.date}</p>
                       </div>
                     </Link>
                   ))}
@@ -292,9 +302,13 @@ export function BlogPageClient({ blog, otherBlogs, site }: Props) {
                 </p>
                 <Link
                   href="/#hizmetler"
-                  className="inline-flex items-center gap-2 rounded-xl bg-[#d4232a] px-5 py-2.5 text-sm font-bold text-white transition-all hover:bg-[#b91c22]"
+                  className="group inline-flex items-center gap-2 rounded-xl bg-[#d4232a] px-5 py-2.5 text-sm font-bold text-white transition-all hover:bg-[#b91c22] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d4232a]"
                 >
-                  Hizmetleri Gör →
+                  Hizmetleri Gör
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden>
+                    <line x1={5} y1={12} x2={19} y2={12} />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
                 </Link>
               </div>
             </div>
@@ -308,33 +322,36 @@ export function BlogPageClient({ blog, otherBlogs, site }: Props) {
           <h2 className="font-gambarino text-2xl text-white md:text-3xl">
             Aracınızdaki Göçükten Kurtulun
           </h2>
-          <p className="mx-auto mt-4 max-w-lg text-base text-white/70">
+          <p className="mx-auto mt-4 max-w-lg text-base text-white/85">
             Ücretsiz ekspertiz için hemen arayın veya WhatsApp&apos;tan fotoğraf gönderin.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a
               href={site.phoneHref}
-              className="inline-flex items-center gap-2 rounded-xl bg-[#d4232a] px-8 py-4 text-sm font-bold uppercase text-white shadow-xl shadow-red-600/25 transition-all hover:bg-[#b91c22] hover:-translate-y-0.5"
+              aria-label={`Telefon ile ara: ${site.phone}`}
+              className="cs-btn-press inline-flex items-center gap-2 rounded-xl bg-[#d4232a] px-8 py-4 text-sm font-bold uppercase text-white shadow-xl shadow-red-600/25 transition-all hover:bg-[#b91c22] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
-              <PhoneIcon className="h-4 w-4" />
+              <PhoneIcon className="h-4 w-4" aria-hidden />
               {site.phone}
             </a>
             <a
               href={site.whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-8 py-4 text-sm font-bold uppercase text-white transition-all hover:bg-[#20bd5a] hover:-translate-y-0.5"
+              aria-label="WhatsApp ile iletişim"
+              className="cs-btn-press inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-8 py-4 text-sm font-bold uppercase text-white transition-all hover:bg-[#20bd5a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
-              <WhatsAppIcon className="h-4 w-4" />
+              <WhatsAppIcon className="h-4 w-4" aria-hidden />
               WhatsApp
             </a>
             <a
               href={site.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#f09433] via-[#e6683c] to-[#dc2743] px-8 py-4 text-sm font-bold uppercase text-white transition-all hover:-translate-y-0.5"
+              aria-label="Instagram sayfamız"
+              className="cs-btn-press inline-flex items-center gap-2 rounded-xl bg-gradient-to-br from-[#f09433] via-[#e6683c] to-[#dc2743] px-8 py-4 text-sm font-bold uppercase text-white transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
-              <InstagramIcon className="h-4 w-4" />
+              <InstagramIcon className="h-4 w-4" aria-hidden />
               Instagram
             </a>
           </div>
@@ -343,38 +360,41 @@ export function BlogPageClient({ blog, otherBlogs, site }: Props) {
 
       {/* Footer mini */}
       <footer className="bg-[#0a1e3d] border-t border-white/10 py-6">
-        <div className="mx-auto max-w-[1200px] px-6 flex flex-col items-center justify-between gap-3 text-xs text-white/40 md:flex-row lg:px-8">
+        <div className="mx-auto max-w-[1200px] px-6 flex flex-col items-center justify-between gap-3 text-xs text-white/65 md:flex-row lg:px-8">
           <p>&copy; 2026 {site.brand}. Tüm hakları saklıdır.</p>
-          <Link href="/" className="text-white/60 hover:text-[#d4232a] transition-colors">
+          <Link href="/" className="rounded text-white/80 hover:text-[#d4232a] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
             ← Ana Sayfaya Dön
           </Link>
         </div>
       </footer>
 
       {/* Mobile bottom bar */}
-      <div className="fixed inset-x-0 bottom-0 z-40 flex items-center gap-0 md:hidden">
+      <div className="safe-bottom fixed inset-x-0 bottom-0 z-40 flex items-center gap-0 shadow-[0_-4px_16px_rgba(0,0,0,0.15)] md:hidden">
         <a
           href={site.phoneHref}
+          aria-label={`Telefon ile ara: ${site.phone}`}
           className="flex flex-1 items-center justify-center gap-2 bg-[#d4232a] py-3.5 text-sm font-bold text-white"
         >
-          <PhoneIcon className="h-4 w-4" />
+          <PhoneIcon className="h-4 w-4" aria-hidden />
           Hemen Ara
         </a>
         <a
           href={site.whatsappHref}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="WhatsApp ile iletişim"
           className="flex items-center justify-center bg-[#25D366] px-5 py-3.5 text-white"
         >
-          <WhatsAppIcon className="h-5 w-5" />
+          <WhatsAppIcon className="h-5 w-5" aria-hidden />
         </a>
         <a
           href={site.social.instagram}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center bg-[#e6683c] px-5 py-3.5 text-white"
+          aria-label="Instagram sayfamız"
+          className="flex items-center justify-center bg-gradient-to-br from-[#f09433] via-[#e6683c] to-[#dc2743] px-5 py-3.5 text-white"
         >
-          <InstagramIcon className="h-5 w-5" />
+          <InstagramIcon className="h-5 w-5" aria-hidden />
         </a>
       </div>
     </div>

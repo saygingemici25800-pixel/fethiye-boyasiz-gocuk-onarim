@@ -150,8 +150,11 @@ export function GalleryPageClient({ site }: Props) {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-100 bg-white/95 backdrop-blur-md">
         <div className="mx-auto flex max-w-[1200px] items-center justify-between px-4 py-3 lg:px-8">
-          <Link href="/" className="flex items-center gap-3 text-sm font-semibold text-[#111827] transition-colors hover:text-[#d4232a]">
-            <ArrowLeftIcon className="h-4 w-4" />
+          <Link
+            href="/"
+            className="flex items-center gap-2 rounded-md px-1 py-1 text-sm font-semibold text-[#111827] transition-colors hover:text-[#d4232a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d4232a]"
+          >
+            <ArrowLeftIcon className="h-4 w-4" aria-hidden />
             Ana Sayfa
           </Link>
           <div className="flex items-center gap-3">
@@ -159,16 +162,16 @@ export function GalleryPageClient({ site }: Props) {
               href={site.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#d4232a] text-white shadow-md transition-all hover:scale-110"
-              aria-label="Instagram"
+              className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[#f09433] via-[#e6683c] to-[#dc2743] text-white shadow-md transition-all hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d4232a]"
+              aria-label="Instagram sayfamız"
             >
-              <InstagramIcon className="h-5 w-5" />
+              <InstagramIcon className="h-5 w-5" aria-hidden />
             </a>
             <a
               href={site.phoneHref}
-              className="flex items-center gap-2 rounded-xl bg-[#d4232a] px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-red-500/20 transition-all hover:bg-[#b91c22] hover:-translate-y-0.5 whitespace-nowrap"
+              className="flex items-center gap-2 rounded-xl bg-[#d4232a] px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-red-500/20 transition-all hover:bg-[#b91c22] hover:-translate-y-0.5 whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d4232a]"
             >
-              <PhoneIcon className="h-4 w-4" />
+              <PhoneIcon className="h-4 w-4" aria-hidden />
               Hemen Ara
             </a>
           </div>
@@ -188,15 +191,15 @@ export function GalleryPageClient({ site }: Props) {
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a1e3d]/90 via-[#0a1e3d]/50 to-transparent" />
         <div className="relative z-10 flex h-full items-end pb-12">
           <div className="mx-auto w-full max-w-[1200px] px-6 lg:px-8">
-            <nav className="mb-4 text-sm text-white/60">
-              <Link href="/" className="hover:text-white transition-colors">Anasayfa</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Galerimiz</span>
+            <nav aria-label="Breadcrumb" className="mb-4 text-sm text-white/80">
+              <Link href="/" className="rounded hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Anasayfa</Link>
+              <span className="mx-2" aria-hidden>/</span>
+              <span className="text-white" aria-current="page">Galerimiz</span>
             </nav>
             <h1 className="font-gambarino-bold text-3xl text-white md:text-4xl lg:text-5xl">
               Galerimiz
             </h1>
-            <p className="mt-3 max-w-lg text-base text-white/75">
+            <p className="mt-3 max-w-lg text-base text-white/85">
               Tüm hizmet gruplarımıza ait fotoğraf ve videolar.
             </p>
           </div>
@@ -206,17 +209,17 @@ export function GalleryPageClient({ site }: Props) {
       {/* Quick Nav */}
       <div className="sticky top-[56px] z-40 border-b border-gray-100 bg-white/95 backdrop-blur-md">
         <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
-          <div className="no-scrollbar flex gap-2 overflow-x-auto py-3">
+          <nav aria-label="Galeri bölümleri" className="no-scrollbar flex gap-2 overflow-x-auto py-3">
             {GALLERY_GROUPS.map((g) => (
               <a
                 key={g.id}
                 href={`#${g.id}`}
-                className="shrink-0 rounded-full border border-gray-200 px-4 py-2 text-xs font-semibold text-[#111827] transition-all hover:border-[#d4232a] hover:bg-[#d4232a] hover:text-white"
+                className="shrink-0 rounded-full border border-gray-200 px-4 py-2 text-xs font-semibold text-[#111827] transition-all hover:border-[#d4232a] hover:bg-[#d4232a] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d4232a]"
               >
                 {g.title}
               </a>
             ))}
-          </div>
+          </nav>
         </div>
       </div>
 
@@ -237,9 +240,13 @@ export function GalleryPageClient({ site }: Props) {
               </div>
               <Link
                 href={group.serviceLink}
-                className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-[#d4232a] px-5 py-2.5 text-sm font-bold text-white transition-all hover:bg-[#b91c22] hover:-translate-y-0.5"
+                className="group inline-flex shrink-0 items-center gap-2 rounded-xl bg-[#d4232a] px-5 py-2.5 text-sm font-bold text-white shadow-md shadow-red-500/20 transition-all hover:bg-[#b91c22] hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d4232a]"
               >
-                Hizmet Detayı →
+                Hizmet Detayı
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden>
+                  <line x1={5} y1={12} x2={19} y2={12} />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
               </Link>
             </div>
 
@@ -285,13 +292,16 @@ export function GalleryPageClient({ site }: Props) {
                   className="object-cover opacity-30"
                 />
                 <div className="relative z-10 text-center">
-                  <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#d4232a] text-white shadow-2xl shadow-red-600/30 transition-all hover:scale-110 cursor-pointer md:h-20 md:w-20">
+                  <div
+                    className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#d4232a] text-white shadow-2xl shadow-red-600/30 ring-4 ring-white/10 transition-all md:h-20 md:w-20"
+                    aria-hidden
+                  >
                     <PlayIcon className="ml-1 h-7 w-7 md:h-8 md:w-8" />
                   </div>
-                  <p className="text-sm font-semibold text-white/80 md:text-base">
+                  <p className="text-sm font-semibold text-white/90 md:text-base">
                     {group.videoLabel}
                   </p>
-                  <p className="mt-1 text-xs text-white/40">
+                  <p className="mt-1 text-xs text-white/60">
                     Video yakında eklenecek
                   </p>
                 </div>
@@ -312,33 +322,36 @@ export function GalleryPageClient({ site }: Props) {
           <h2 className="font-gambarino text-2xl text-white md:text-3xl">
             Aracınızdaki Göçükten Kurtulun
           </h2>
-          <p className="mx-auto mt-4 max-w-lg text-base text-white/70">
+          <p className="mx-auto mt-4 max-w-lg text-base text-white/85">
             Ücretsiz ekspertiz için hemen arayın veya WhatsApp&apos;tan fotoğraf gönderin.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a
               href={site.phoneHref}
-              className="inline-flex items-center gap-2 rounded-xl bg-[#d4232a] px-8 py-4 text-sm font-bold uppercase text-white shadow-xl shadow-red-600/25 transition-all hover:bg-[#b91c22] hover:-translate-y-0.5"
+              aria-label={`Telefon ile ara: ${site.phone}`}
+              className="cs-btn-press inline-flex items-center gap-2 rounded-xl bg-[#d4232a] px-8 py-4 text-sm font-bold uppercase text-white shadow-xl shadow-red-600/25 transition-all hover:bg-[#b91c22] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
-              <PhoneIcon className="h-4 w-4" />
+              <PhoneIcon className="h-4 w-4" aria-hidden />
               {site.phone}
             </a>
             <a
               href={site.whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-8 py-4 text-sm font-bold uppercase text-white transition-all hover:bg-[#20bd5a] hover:-translate-y-0.5"
+              aria-label="WhatsApp ile iletişim"
+              className="cs-btn-press inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-8 py-4 text-sm font-bold uppercase text-white transition-all hover:bg-[#20bd5a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
-              <WhatsAppIcon className="h-4 w-4" />
+              <WhatsAppIcon className="h-4 w-4" aria-hidden />
               WhatsApp
             </a>
             <a
               href={site.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl bg-[#d4232a] px-8 py-4 text-sm font-bold uppercase text-white transition-all hover:-translate-y-0.5"
+              aria-label="Instagram sayfamız"
+              className="cs-btn-press inline-flex items-center gap-2 rounded-xl bg-gradient-to-br from-[#f09433] via-[#e6683c] to-[#dc2743] px-8 py-4 text-sm font-bold uppercase text-white transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
-              <InstagramIcon className="h-4 w-4" />
+              <InstagramIcon className="h-4 w-4" aria-hidden />
               Instagram
             </a>
           </div>
@@ -347,73 +360,82 @@ export function GalleryPageClient({ site }: Props) {
 
       {/* Footer mini */}
       <footer className="bg-[#0a1e3d] border-t border-white/10 py-6">
-        <div className="mx-auto max-w-[1200px] px-6 flex flex-col items-center justify-between gap-3 text-xs text-white/40 md:flex-row lg:px-8">
+        <div className="mx-auto max-w-[1200px] px-6 flex flex-col items-center justify-between gap-3 text-xs text-white/65 md:flex-row lg:px-8">
           <p>&copy; 2026 {site.brand}. Tüm hakları saklıdır.</p>
-          <Link href="/" className="text-white/60 hover:text-[#d4232a] transition-colors">
+          <Link href="/" className="rounded text-white/80 hover:text-[#d4232a] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
             ← Ana Sayfaya Dön
           </Link>
         </div>
       </footer>
 
       {/* Mobile bottom bar */}
-      <div className="fixed inset-x-0 bottom-0 z-40 flex items-center gap-0 md:hidden">
+      <div className="safe-bottom fixed inset-x-0 bottom-0 z-40 flex items-center gap-0 shadow-[0_-4px_16px_rgba(0,0,0,0.15)] md:hidden">
         <a
           href={site.phoneHref}
+          aria-label={`Telefon ile ara: ${site.phone}`}
           className="flex flex-1 items-center justify-center gap-2 bg-[#d4232a] py-3.5 text-sm font-bold text-white"
         >
-          <PhoneIcon className="h-4 w-4" />
+          <PhoneIcon className="h-4 w-4" aria-hidden />
           Hemen Ara
         </a>
         <a
           href={site.whatsappHref}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="WhatsApp ile iletişim"
           className="flex items-center justify-center bg-[#25D366] px-5 py-3.5 text-white"
         >
-          <WhatsAppIcon className="h-5 w-5" />
+          <WhatsAppIcon className="h-5 w-5" aria-hidden />
         </a>
         <a
           href={site.social.instagram}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center bg-[#e6683c] px-5 py-3.5 text-white"
+          aria-label="Instagram sayfamız"
+          className="flex items-center justify-center bg-gradient-to-br from-[#f09433] via-[#e6683c] to-[#dc2743] px-5 py-3.5 text-white"
         >
-          <InstagramIcon className="h-5 w-5" />
+          <InstagramIcon className="h-5 w-5" aria-hidden />
         </a>
       </div>
 
       {/* Lightbox */}
       {lightbox && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${GALLERY_GROUPS[lightbox.groupIdx].title} görseli`}
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm cs-fade-in"
           onClick={closeLightbox}
         >
           <button
             type="button"
             onClick={closeLightbox}
-            className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:bg-white/20"
+            aria-label="Kapat"
+            className="absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white/15 text-white transition-all hover:bg-white/25 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
-            <CloseIcon className="h-6 w-6" />
+            <CloseIcon className="h-6 w-6" aria-hidden />
           </button>
 
           <button
             type="button"
             onClick={(e) => { e.stopPropagation(); lightboxNav(-1); }}
-            className="absolute left-4 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:bg-[#d4232a]"
+            aria-label="Önceki görsel"
+            className="absolute left-4 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/15 text-white transition-all hover:bg-[#d4232a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
-            <ChevronLeftIcon className="h-6 w-6" />
+            <ChevronLeftIcon className="h-6 w-6" aria-hidden />
           </button>
 
           <button
             type="button"
             onClick={(e) => { e.stopPropagation(); lightboxNav(1); }}
-            className="absolute right-4 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:bg-[#d4232a]"
+            aria-label="Sonraki görsel"
+            className="absolute right-4 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/15 text-white transition-all hover:bg-[#d4232a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
-            <ChevronRightIcon className="h-6 w-6" />
+            <ChevronRightIcon className="h-6 w-6" aria-hidden />
           </button>
 
           <div
-            className="relative mx-4 aspect-[4/3] w-full max-w-[900px] overflow-hidden rounded-2xl"
+            className="relative mx-4 aspect-[4/3] w-full max-w-[900px] overflow-hidden rounded-2xl shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
@@ -426,10 +448,10 @@ export function GalleryPageClient({ site }: Props) {
           </div>
 
           <div className="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 items-center gap-3">
-            <span className="rounded-full bg-white/10 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-sm">
+            <span className="rounded-full bg-white/15 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-sm">
               {GALLERY_GROUPS[lightbox.groupIdx].title}
             </span>
-            <span className="text-sm text-white/50">
+            <span className="text-sm text-white/75" aria-live="polite">
               {lightbox.imgIdx + 1} / {GALLERY_GROUPS[lightbox.groupIdx].images.length}
             </span>
           </div>

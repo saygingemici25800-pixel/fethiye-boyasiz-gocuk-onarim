@@ -98,7 +98,8 @@ export default function RootLayout({
       lang="tr"
       className={`${roboto.variable} ${dosis.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans text-[#4b5563]">
+      <body className="min-h-full flex flex-col font-sans text-[#374151]">
+        <a href="#main" className="cs-skip-link">Ana içeriğe geç</a>
         <StructuredData />
         {children}
       </body>

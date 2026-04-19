@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ChevronLeftIcon, ChevronRightIcon } from "@/components/icons";
+import { CheckIcon, ChevronLeftIcon, ChevronRightIcon } from "@/components/icons";
 import { HERO_SLIDES } from "@/lib/site-data";
 
 export function HeroSlider() {
@@ -84,13 +84,13 @@ export function HeroSlider() {
               <h1 className="cs-hero-title font-gambarino-bold mb-5 text-[30px] uppercase leading-[1.1] tracking-tight text-white md:text-[40px] lg:text-[46px]">
                 {slide.title}
               </h1>
-              <p className="cs-hero-sub mx-auto mb-8 max-w-[440px] text-[14px] leading-[1.7] text-white/80 md:text-[15px]">
+              <p className="cs-hero-sub mx-auto mb-8 max-w-[440px] text-[14px] leading-[1.7] text-white/85 md:text-[15px]">
                 {slide.subtitle}
               </p>
               <div className="cs-hero-cta">
                 <Link
                   href={slide.cta.href}
-                  className="cs-btn-press inline-flex items-center rounded-xl bg-[#d4232a] px-7 py-3.5 text-[13px] font-bold uppercase tracking-wide text-white shadow-xl shadow-red-600/20"
+                  className="cs-btn-press inline-flex items-center rounded-xl bg-[#d4232a] px-7 py-3.5 text-[13px] font-bold uppercase tracking-wide text-white shadow-xl shadow-red-600/25 hover:bg-[#b91c22] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
                 >
                   {slide.cta.label}
                 </Link>
@@ -103,15 +103,15 @@ export function HeroSlider() {
       {/* Trust badges — pinned to the bottom of the hero */}
       <div className="cs-hero-badges absolute bottom-6 left-1/2 z-20 hidden -translate-x-1/2 items-center gap-3 md:bottom-8 md:flex">
         <div className="flex items-center gap-2 rounded-full bg-[#d4232a] px-4 py-2 text-[11px] font-semibold text-white shadow-lg shadow-red-600/20">
-          <span className="text-xs">✓</span>
+          <CheckIcon className="h-3.5 w-3.5" aria-hidden />
           Ücretsiz Ekspertiz
         </div>
         <div className="flex items-center gap-2 rounded-full bg-[#2d2d2d] px-4 py-2 text-[11px] font-semibold text-white shadow-lg shadow-black/20">
-          <span className="text-xs">✓</span>
+          <CheckIcon className="h-3.5 w-3.5" aria-hidden />
           Tramer Kaydı Oluşmaz
         </div>
         <div className="flex items-center gap-2 rounded-full bg-[#d4232a] px-4 py-2 text-[11px] font-semibold text-white shadow-lg shadow-red-600/20">
-          <span className="text-xs">✓</span>
+          <CheckIcon className="h-3.5 w-3.5" aria-hidden />
           Aynı Gün Teslim
         </div>
       </div>
@@ -119,33 +119,43 @@ export function HeroSlider() {
       {/* Nav arrows — consistent 48px */}
       <button
         type="button"
-        aria-label="Önceki"
+        aria-label="Önceki slayt"
         onClick={() => go(-1)}
-        className="cs-btn-press absolute left-4 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/[.08] text-white/80 backdrop-blur-sm hover:bg-[#d4232a] hover:text-white md:left-6"
+        className="cs-btn-press absolute left-4 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur-md ring-1 ring-white/10 transition-colors hover:bg-[#d4232a] hover:ring-white/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:left-6"
       >
         <ChevronLeftIcon className="h-5 w-5" />
       </button>
       <button
         type="button"
-        aria-label="Sonraki"
+        aria-label="Sonraki slayt"
         onClick={() => go(1)}
-        className="cs-btn-press absolute right-4 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/[.08] text-white/80 backdrop-blur-sm hover:bg-[#d4232a] hover:text-white md:right-6"
+        className="cs-btn-press absolute right-4 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur-md ring-1 ring-white/10 transition-colors hover:bg-[#d4232a] hover:ring-white/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:right-6"
       >
         <ChevronRightIcon className="h-5 w-5" />
       </button>
 
-      {/* Dots — sit just above the trust badges */}
-      <div className="absolute bottom-20 left-1/2 z-20 flex -translate-x-1/2 gap-2 md:bottom-24">
+      {/* Dots — sit just above the trust badges. Wrappers expand tap area to >=32px while dots stay small visually */}
+      <div
+        className="absolute bottom-20 left-1/2 z-20 flex -translate-x-1/2 gap-1 md:bottom-24"
+        role="tablist"
+        aria-label="Slayt seçimi"
+      >
         {HERO_SLIDES.map((s, i) => (
           <button
             key={s.title}
             type="button"
+            role="tab"
+            aria-selected={i === idx}
             aria-label={`${i + 1}. slayda git`}
             onClick={() => setIdx(i)}
-            className={`h-[6px] rounded-full transition-all duration-500 ${
-              i === idx ? "w-8 bg-[#d4232a]" : "w-[6px] bg-white/40 hover:bg-white/70"
-            }`}
-          />
+            className="group flex h-8 items-center justify-center px-1.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded-full"
+          >
+            <span
+              className={`block h-[6px] rounded-full transition-all duration-500 ${
+                i === idx ? "w-8 bg-[#d4232a]" : "w-[6px] bg-white/50 group-hover:bg-white/80"
+              }`}
+            />
+          </button>
         ))}
       </div>
     </section>

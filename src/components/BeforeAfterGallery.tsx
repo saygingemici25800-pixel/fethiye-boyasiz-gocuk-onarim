@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRightIcon } from "@/components/icons";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 interface BeforeAfterItem {
@@ -56,7 +57,7 @@ export function BeforeAfterGallery() {
           <h2 className="font-gambarino mt-3 text-[28px] leading-tight text-[#111827] md:text-[36px]">
             Öncesi — <span className="text-[#d4232a]">Sonrası</span>
           </h2>
-          <p className="mx-auto mt-4 max-w-md text-[15px] leading-relaxed text-[#6b7280]">
+          <p className="mx-auto mt-4 max-w-md text-[15px] leading-relaxed text-[#4b5563]">
             Farkı kendi gözlerinizle görün. Tüm işlerimiz gerçek müşteri araçlarıdır.
           </p>
         </div>
@@ -109,9 +110,10 @@ export function BeforeAfterGallery() {
         <div className="cs-reveal mt-10 text-center">
           <Link
             href="/galeri"
-            className="cs-btn-press inline-flex items-center gap-2 rounded-xl bg-[#2d2d2d] px-7 py-3.5 text-[13px] font-bold uppercase tracking-wide text-white"
+            className="cs-btn-press group inline-flex items-center gap-2 rounded-xl bg-[#2d2d2d] px-7 py-3.5 text-[13px] font-bold uppercase tracking-wide text-white shadow-lg shadow-black/10 hover:bg-[#1a1a1a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d4232a]"
           >
-            Tüm Galeriyi Gör →
+            Tüm Galeriyi Gör
+            <ArrowRightIcon className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden />
           </Link>
         </div>
       </div>

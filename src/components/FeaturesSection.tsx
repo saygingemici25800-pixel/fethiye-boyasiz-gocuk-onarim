@@ -25,7 +25,7 @@ export function FeaturesSection() {
           <h2 className="font-gambarino mt-3 text-[28px] leading-tight text-[#111827] md:text-[36px]">
             Boyasız Onarımda <span className="text-[#d4232a]">Fark Yaratan</span> Hizmet
           </h2>
-          <p className="mx-auto mt-4 max-w-md text-[15px] leading-relaxed text-[#6b7280]">
+          <p className="mx-auto mt-4 max-w-md text-[15px] leading-relaxed text-[#4b5563]">
             Aracınızın değerini korumak için en doğru yöntem: boyasız göçük onarımı.
           </p>
         </div>
@@ -45,7 +45,7 @@ export function FeaturesSection() {
                 <h3 className="mb-2 text-base font-bold text-[#111827]">
                   {f.title}
                 </h3>
-                <p className="text-[13px] leading-relaxed text-[#6b7280]">
+                <p className="text-[13px] leading-relaxed text-[#4b5563]">
                   {f.description}
                 </p>
               </div>
