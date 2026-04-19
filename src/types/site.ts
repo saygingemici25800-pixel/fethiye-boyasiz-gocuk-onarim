@@ -8,7 +8,8 @@ export interface HeroSlide {
   title: string;
   subtitle: string;
   cta: { label: string; href: string };
-  image: string;
+  beforeImage: string;
+  afterImage: string;
 }
 
 export interface Feature {

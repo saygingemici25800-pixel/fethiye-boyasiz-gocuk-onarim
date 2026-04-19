@@ -16,24 +16,24 @@ export function ContactSection() {
   useScrollReveal();
 
   return (
-    <section id="iletisim" className="cs-section-fade bg-white py-24">
+    <section id="iletisim" className="cs-section-fade bg-white py-20 md:py-24">
       <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
-        <div className="cs-reveal mb-16 text-center">
-          <span className="mb-3 inline-block rounded-full bg-[#2d2d2d]/8 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-[#2d2d2d]">
+        <div className="cs-reveal mb-12 text-center md:mb-16">
+          <span className="mb-3 inline-block rounded-full bg-[#2d2d2d]/[.06] px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-[#2d2d2d]/70">
             Bize Ulaşın
           </span>
-          <h2 className="font-gambarino mt-4 text-3xl text-[#111827] md:text-4xl">
+          <h2 className="font-gambarino mt-3 text-[28px] leading-tight text-[#111827] md:text-[36px]">
             <span className="text-[#d4232a]">İletişim</span> Bilgilerimiz
           </h2>
-          <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-[#4b5563]">
+          <p className="mx-auto mt-4 max-w-md text-[15px] leading-relaxed text-[#6b7280]">
             Ücretsiz ekspertiz randevusu almak veya fiyat bilgisi öğrenmek için bize ulaşın.
           </p>
         </div>
 
-        <div className="cs-reveal grid grid-cols-1 gap-8 lg:grid-cols-5">
+        <div className="cs-reveal grid grid-cols-1 gap-6 md:gap-8 lg:grid-cols-5">
           {/* Map */}
           <div className="lg:col-span-3">
-            <div className="overflow-hidden rounded-2xl border border-gray-100 shadow-sm">
+            <div className="overflow-hidden rounded-2xl border border-gray-100/80 shadow-sm">
               <iframe
                 src={MAPS_EMBED}
                 width="100%"
@@ -50,7 +50,7 @@ export function ContactSection() {
               href={MAPS_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[#d4232a] transition-colors hover:text-[#b91c22]"
+              className="mt-3 inline-flex items-center gap-2 text-[13px] font-semibold text-[#d4232a] transition-colors hover:text-[#b91c22]"
             >
               <MapPinIcon className="h-4 w-4" />
               Google Maps&apos;te Aç →
@@ -59,14 +59,14 @@ export function ContactSection() {
 
           {/* Contact Cards */}
           <div className="cs-stagger flex flex-col gap-5 lg:col-span-2">
-            <article className="cs-reveal cs-reveal-delay-1 cs-card-lift group overflow-hidden rounded-xl border border-gray-100 bg-white p-6 shadow-sm hover:border-[#2d2d2d]/20">
+            <article className="cs-reveal cs-reveal-delay-1 cs-card-lift group overflow-hidden rounded-2xl border border-gray-100/80 bg-white p-6 shadow-sm hover:border-[#2d2d2d]/20">
               <div className="flex items-start gap-4">
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#2d2d2d]/8 text-[#2d2d2d] transition-all duration-300 group-hover:bg-[#2d2d2d] group-hover:text-white">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#2d2d2d]/[.06] text-[#2d2d2d] transition-all duration-300 group-hover:bg-[#2d2d2d] group-hover:text-white">
                   <MapPinIcon className="h-5 w-5" />
                 </span>
                 <div>
-                  <h3 className="mb-1 text-base font-bold text-[#111827]">Adresimiz</h3>
-                  <p className="text-sm leading-relaxed text-[#4b5563]">
+                  <h3 className="mb-1.5 text-[15px] font-bold text-[#111827]">Adresimiz</h3>
+                  <p className="text-[13px] leading-relaxed text-[#6b7280]">
                     Taşyaka, 261. Sk. No:21
                     <br />
                     48300 Fethiye / Muğla
@@ -75,31 +75,31 @@ export function ContactSection() {
               </div>
             </article>
 
-            <article className="cs-reveal cs-reveal-delay-2 cs-card-lift group overflow-hidden rounded-xl border border-gray-100 bg-white p-6 shadow-sm hover:border-[#2d2d2d]/20">
+            <article className="cs-reveal cs-reveal-delay-2 cs-card-lift group overflow-hidden rounded-2xl border border-gray-100/80 bg-white p-6 shadow-sm hover:border-[#2d2d2d]/20">
               <div className="flex items-start gap-4">
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#2d2d2d]/8 text-[#2d2d2d] transition-all duration-300 group-hover:bg-[#2d2d2d] group-hover:text-white">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#2d2d2d]/[.06] text-[#2d2d2d] transition-all duration-300 group-hover:bg-[#2d2d2d] group-hover:text-white">
                   <PhoneIcon className="h-5 w-5" />
                 </span>
                 <div>
-                  <h3 className="mb-1 text-base font-bold text-[#111827]">
+                  <h3 className="mb-1.5 text-[15px] font-bold text-[#111827]">
                     <a href={SITE.phoneHref} className="transition-colors hover:text-[#d4232a]">
                       {SITE.phone}
                     </a>
                   </h3>
-                  <p className="text-sm leading-relaxed text-[#4b5563]">
+                  <p className="text-[13px] leading-relaxed text-[#6b7280]">
                     Pzt — Cmt: 08:30 — 18:00
                   </p>
                 </div>
               </div>
             </article>
 
-            <article className="cs-reveal cs-reveal-delay-3 cs-card-lift group overflow-hidden rounded-xl border border-gray-100 bg-white p-6 shadow-sm hover:border-[#25D366]/20">
+            <article className="cs-reveal cs-reveal-delay-3 cs-card-lift group overflow-hidden rounded-2xl border border-gray-100/80 bg-white p-6 shadow-sm hover:border-[#25D366]/20">
               <div className="flex items-start gap-4">
                 <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#25D366]/10 text-[#25D366] transition-all duration-300 group-hover:bg-[#25D366] group-hover:text-white">
                   <WhatsAppIcon className="h-5 w-5" />
                 </span>
                 <div>
-                  <h3 className="mb-1 text-base font-bold text-[#111827]">
+                  <h3 className="mb-1.5 text-[15px] font-bold text-[#111827]">
                     <a
                       href={SITE.whatsappHref}
                       target="_blank"
@@ -109,7 +109,7 @@ export function ContactSection() {
                       WhatsApp Hattı
                     </a>
                   </h3>
-                  <p className="flex items-center gap-1.5 text-sm leading-relaxed text-[#4b5563]">
+                  <p className="flex items-center gap-1.5 text-[13px] leading-relaxed text-[#6b7280]">
                     <ClockIcon className="h-3.5 w-3.5 text-[#6b7280]" />
                     7/24 mesaj atabilirsiniz
                   </p>
@@ -120,7 +120,7 @@ export function ContactSection() {
             {/* CTA */}
             <a
               href={SITE.phoneHref}
-              className="cs-btn-press cs-reveal cs-reveal-delay-4 flex items-center justify-center gap-2 rounded-xl bg-[#d4232a] py-4 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-red-500/20"
+              className="cs-btn-press cs-reveal cs-reveal-delay-4 flex items-center justify-center gap-2 rounded-xl bg-[#d4232a] px-7 py-3.5 text-[13px] font-bold uppercase tracking-wide text-white shadow-xl shadow-red-600/20"
             >
               <PhoneIcon className="h-4 w-4" />
               Hemen Ara: {SITE.phone}

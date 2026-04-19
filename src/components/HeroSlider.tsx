@@ -31,48 +31,77 @@ export function HeroSlider() {
           }`}
           aria-hidden={i !== idx}
         >
-          {/* Dark background behind image */}
+          {/* Dark background behind images */}
           <div className="absolute inset-0 bg-[#0a1e3d]" />
-          <Image
-            src={slide.image}
-            alt={slide.title}
-            fill
-            priority={i === 0}
-            sizes="100vw"
-            className={`object-contain object-center ${i === idx ? "cs-ken-burns" : ""}`}
-          />
-          {/* Gradients over image */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a1e3d]/90 via-[#0a1e3d]/60 to-[#0a1e3d]/30" />
 
-          <div className="relative z-10 flex h-full items-center">
-            {/* 8px grid: px-24/32, max-w consistent */}
-            <div className="mx-auto w-full max-w-[1200px] px-6 lg:px-8">
-              <div className="max-w-[600px]">
-                <p className="cs-hero-badge mb-4 inline-block rounded-full border border-white/15 bg-white/[.07] px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-white/80 backdrop-blur-sm md:text-xs">
-                  {slide.small}
-                </p>
-                <h1 className="cs-hero-title font-gambarino-bold mb-5 text-[36px] uppercase leading-[1.08] tracking-tight text-white md:text-[48px] lg:text-[56px]">
-                  {slide.title}
-                </h1>
-                <p className="cs-hero-sub mb-8 max-w-[480px] text-[15px] leading-[1.7] text-white/75 md:text-base">
-                  {slide.subtitle}
-                </p>
-                <div className="cs-hero-cta">
-                  <Link
-                    href={slide.cta.href}
-                    className="cs-btn-press inline-flex items-center rounded-xl bg-[#d4232a] px-7 py-3.5 text-[13px] font-bold uppercase tracking-wide text-white shadow-xl shadow-red-600/20"
-                  >
-                    {slide.cta.label}
-                  </Link>
-                </div>
+          {/* Before / After split — stacked on mobile, side-by-side on md+ */}
+          <div className="absolute inset-0 flex flex-col md:flex-row">
+            <div className="relative h-1/2 w-full overflow-hidden md:h-full md:w-1/2">
+              <Image
+                src={slide.beforeImage}
+                alt={`${slide.title} — Öncesi`}
+                fill
+                priority={i === 0}
+                sizes="(min-width:768px) 50vw, 100vw"
+                className={`object-cover object-center ${i === idx ? "cs-ken-burns" : ""}`}
+              />
+            </div>
+            <div className="relative h-1/2 w-full overflow-hidden md:h-full md:w-1/2">
+              <Image
+                src={slide.afterImage}
+                alt={`${slide.title} — Sonrası`}
+                fill
+                priority={i === 0}
+                sizes="(min-width:768px) 50vw, 100vw"
+                className={`object-cover object-center ${i === idx ? "cs-ken-burns" : ""}`}
+              />
+            </div>
+          </div>
+
+          {/* Subtle divider between halves */}
+          <div
+            className="absolute left-0 right-0 top-1/2 z-[4] h-px -translate-y-1/2 bg-white/25 md:inset-y-0 md:left-1/2 md:top-0 md:h-auto md:w-px md:translate-y-0"
+            aria-hidden
+          />
+
+          {/* Öncesi / Sonrası labels */}
+          <span className="absolute left-4 top-24 z-[5] rounded-md bg-[#d4232a] px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.12em] text-white shadow-lg shadow-black/30 md:left-8">
+            Öncesi
+          </span>
+          <span className="absolute right-4 top-[calc(50%+1rem)] z-[5] rounded-md bg-[#2d2d2d] px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.12em] text-white shadow-lg shadow-black/30 md:right-8 md:top-24">
+            Sonrası
+          </span>
+
+          {/* Gradient over images for text legibility — top-weighted so content reads across both halves */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a1e3d]/80 via-[#0a1e3d]/35 to-[#0a1e3d]/10" />
+
+          {/* Text content — upper center of the full slide */}
+          <div className="relative z-10 flex h-full w-full items-start justify-center pt-24 md:pt-28">
+            <div className="mx-auto w-full max-w-[560px] px-6 text-center lg:px-8">
+              <p className="cs-hero-badge mb-4 inline-block rounded-full border border-white/15 bg-white/[.07] px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-white/80 backdrop-blur-sm">
+                {slide.small}
+              </p>
+              <h1 className="cs-hero-title font-gambarino-bold mb-5 text-[30px] uppercase leading-[1.1] tracking-tight text-white md:text-[40px] lg:text-[46px]">
+                {slide.title}
+              </h1>
+              <p className="cs-hero-sub mx-auto mb-8 max-w-[440px] text-[14px] leading-[1.7] text-white/80 md:text-[15px]">
+                {slide.subtitle}
+              </p>
+              <div className="cs-hero-cta">
+                <Link
+                  href={slide.cta.href}
+                  className="cs-btn-press inline-flex items-center rounded-xl bg-[#d4232a] px-7 py-3.5 text-[13px] font-bold uppercase tracking-wide text-white shadow-xl shadow-red-600/20"
+                >
+                  {slide.cta.label}
+                </Link>
               </div>
             </div>
           </div>
         </div>
       ))}
 
-      {/* Trust badges — 8px gap */}
-      <div className="cs-hero-badges absolute bottom-20 left-1/2 z-20 hidden -translate-x-1/2 items-center gap-3 md:flex">
+      {/* Trust badges — pinned to the bottom of the hero */}
+      <div className="cs-hero-badges absolute bottom-6 left-1/2 z-20 hidden -translate-x-1/2 items-center gap-3 md:bottom-8 md:flex">
         <div className="flex items-center gap-2 rounded-full bg-[#d4232a] px-4 py-2 text-[11px] font-semibold text-white shadow-lg shadow-red-600/20">
           <span className="text-xs">✓</span>
           Ücretsiz Ekspertiz
@@ -105,8 +134,8 @@ export function HeroSlider() {
         <ChevronRightIcon className="h-5 w-5" />
       </button>
 
-      {/* Dots — 32px from bottom */}
-      <div className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 gap-2">
+      {/* Dots — sit just above the trust badges */}
+      <div className="absolute bottom-20 left-1/2 z-20 flex -translate-x-1/2 gap-2 md:bottom-24">
         {HERO_SLIDES.map((s, i) => (
           <button
             key={s.title}

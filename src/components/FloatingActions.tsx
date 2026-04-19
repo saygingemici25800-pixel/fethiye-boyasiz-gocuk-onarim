@@ -21,7 +21,7 @@ export function FloatingActions() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="WhatsApp ile yazın"
-        className="cs-pulse fixed bottom-28 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl shadow-green-600/25 transition-all hover:scale-110 hover:shadow-green-600/40 md:bottom-24"
+        className="cs-pulse fixed bottom-36 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl shadow-green-600/25 transition-all hover:scale-110 hover:shadow-green-600/40 md:bottom-24"
       >
         <WhatsAppIcon className="h-7 w-7" />
       </a>
@@ -30,7 +30,7 @@ export function FloatingActions() {
         type="button"
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         aria-label="Yukarı çık"
-        className={`fixed bottom-12 right-5 z-40 flex h-11 w-11 items-center justify-center rounded-xl bg-[#0a1e3d] text-white shadow-lg transition-all duration-300 hover:bg-[#d4232a] md:bottom-8 ${
+        className={`fixed bottom-20 right-5 z-40 flex h-11 w-11 items-center justify-center rounded-xl bg-[#0a1e3d] text-white shadow-lg transition-all duration-300 hover:bg-[#d4232a] md:bottom-8 ${
           show ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-4 opacity-0"
         }`}
       >

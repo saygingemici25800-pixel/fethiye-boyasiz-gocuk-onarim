@@ -44,8 +44,8 @@ export function ProcessSection() {
                 }`}
               >
                 <div
-                  className={`absolute right-4 top-4 text-[64px] font-black leading-none ${
-                    isHL ? "text-white/[.06]" : "text-gray-100"
+                  className={`absolute right-5 top-4 text-[72px] font-black leading-none ${
+                    isHL ? "text-white/[.1]" : "text-[#2d2d2d]/[.06]"
                   }`}
                   aria-hidden
                 >

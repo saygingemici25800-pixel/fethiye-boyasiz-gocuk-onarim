@@ -29,13 +29,13 @@ export function ServicesSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a1e3d]/80 to-[#0a1e3d]/65" />
         <div className="relative z-10 mx-auto flex h-full max-w-[1200px] items-center justify-center px-6 text-center text-white">
           <div>
-            <span className="mb-3 inline-block rounded-full border border-white/15 bg-white/[.07] px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-white/75 backdrop-blur-sm">
+            <span className="mb-3 inline-block rounded-full border border-white/15 bg-white/[.07] px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-white/80 backdrop-blur-sm">
               Profesyonel Çözümler
             </span>
-            <h2 className="font-gambarino mt-3 text-[28px] text-white md:text-[36px] lg:text-[44px]">
+            <h2 className="font-gambarino mt-3 text-[28px] leading-tight text-white md:text-[36px]">
               Hizmetlerimiz
             </h2>
-            <p className="mx-auto mt-3 max-w-sm text-[15px] text-white/60">
+            <p className="mx-auto mt-4 max-w-md text-[15px] leading-relaxed text-white/70">
               Her göçük tipi için uzman çözümler sunuyoruz.
             </p>
           </div>
@@ -66,10 +66,10 @@ export function ServicesSection() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0a1e3d]/85 via-black/25 to-transparent" />
                   <div className="absolute inset-x-0 bottom-0 p-5">
-                    <h3 className="text-base font-bold text-white">
+                    <h3 className="text-[17px] font-bold leading-tight text-white">
                       {s.title}
                     </h3>
-                    <span className="mt-2 inline-flex items-center gap-1 text-[11px] font-semibold uppercase tracking-wider text-white/60 transition-colors duration-300 group-hover:text-[#d4232a]">
+                    <span className="mt-3 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-white/70 transition-colors duration-300 group-hover:text-[#d4232a]">
                       <span className="inline-block h-[1.5px] w-6 rounded-full bg-current transition-all duration-500 group-hover:w-10" />
                       Detay
                     </span>

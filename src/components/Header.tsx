@@ -36,12 +36,12 @@ export function Header() {
         </Link>
 
         <nav className="hidden lg:block">
-          <ul className="flex items-center gap-6">
+          <ul className="flex items-center gap-7 xl:gap-8">
             {NAV.map((link) => (
               <li key={link.label}>
                 <Link
                   href={link.href}
-                  className="relative text-[14px] font-semibold uppercase tracking-wider text-[#111827] transition-colors hover:text-[#d4232a] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-[#d4232a] after:transition-all after:duration-300 hover:after:w-full"
+                  className="relative text-[13px] font-semibold uppercase tracking-[0.08em] text-[#111827] transition-colors hover:text-[#d4232a] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-[#d4232a] after:transition-all after:duration-300 hover:after:w-full"
                 >
                   {link.label}
                 </Link>
