@@ -11,7 +11,7 @@ export function StructuredData() {
     telephone: "+905353093972",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Taşyaka, 261. Sk. No:21",
+      streetAddress: "Taşyaka, 261. Sk. No:11",
       addressLocality: "Fethiye",
       addressRegion: "Muğla",
       postalCode: "48300",
@@ -78,7 +78,7 @@ export function StructuredData() {
         name: "Fethiye'de boyasız göçük onarımı nerede yaptırabilirim?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Fethiye Boyasız Göçük Onarım, Taşyaka 261. Sk. No:21 adresinde hizmet vermektedir. 0535 309 39 72 numarasından ücretsiz ekspertiz randevusu alabilirsiniz.",
+          text: "Fethiye Boyasız Göçük Onarım, Taşyaka 261. Sk. No:11 adresinde hizmet vermektedir. 0535 309 39 72 numarasından ücretsiz ekspertiz randevusu alabilirsiniz.",
         },
       },
     ],

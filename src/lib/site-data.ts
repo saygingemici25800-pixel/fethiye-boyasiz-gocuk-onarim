@@ -12,7 +12,7 @@ export const SITE = {
   phone: "0535 309 39 72",
   phoneHref: "tel:+905353093972",
   whatsappHref: "https://wa.me/905353093972",
-  address: "Taşyaka, 261. Sk. No:21, 48300 Fethiye/Muğla",
+  address: "Taşyaka, 261. Sk. No:11, 48300 Fethiye/Muğla",
   hours: "Pzt - Cmt: 08:30 - 18:00",
   social: {
     facebook: "#",
@@ -36,24 +36,21 @@ export const HERO_SLIDES: HeroSlide[] = [
     subtitle:
       "Aracınızdaki göçükleri boyasız, hızlı ve iz bırakmadan onarıyoruz. Orijinal boyanız korunur, aracınızın değeri düşmez.",
     cta: { label: "Ücretsiz Ekspertiz Al", href: "#iletisim" },
-    beforeImage: "/images/dolu-oncesi.jpeg",
-    afterImage: "/images/dolu-sonrasi.jpeg",
+    image: "/images/dolu-sonrasi.jpeg",
   },
   {
     small: "İZ BIRAKMADAN DÜZELTME",
     title: "Fethiye'nin Güvenilir Adresi",
     subtitle: "Profesyonel ekipman ve tecrübeyle boyasız göçük onarımında Fethiye'nin tercih edilen markasıyız.",
     cta: { label: "Hemen Ara", href: "tel:+905353093972" },
-    beforeImage: "/images/boyasiz-oncesi.jpeg",
-    afterImage: "/images/boyasiz-sonrasi.jpeg",
+    image: "/images/gunes-sonrasi.jpeg",
   },
   {
     small: "YÜZLERCE MUTLU MÜŞTERİ",
     title: "Sonuçlarımız Ortada",
     subtitle: "Öncesi-sonrası fotoğraflarımızı inceleyin, farkı kendi gözlerinizle görün.",
     cta: { label: "Galerimizi İncele", href: "/galeri" },
-    beforeImage: "/images/mini-oncesi.jpeg",
-    afterImage: "/images/mini-sonrasi.jpeg",
+    image: "/images/ppf-kaplama.jpeg",
   },
 ];
 
