@@ -115,33 +115,12 @@
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    -webkit-tap-highlight-color: transparent;
   }
   body {
     background: #ffffff;
-    color: #374151;
+    color: #4b5563;
     font-size: 16px;
     line-height: 1.65;
-    text-rendering: optimizeLegibility;
-  }
-
-  :focus:not(:focus-visible) { outline: none; }
-  :focus-visible {
-    outline: 2px solid #d4232a;
-    outline-offset: 2px;
-    border-radius: 6px;
-  }
-
-  /* Better tap feedback for buttons/links without explicit ring */
-  a, button {
-    -webkit-tap-highlight-color: rgba(212, 35, 42, 0.12);
-  }
-
-  /* Media defaults */
-  img, video { max-width: 100%; height: auto; }
-  ::selection {
-    background: #d4232a;
-    color: #fff;
   }
 
   /* --- DISPLAY: Gambarino — Hero H1, Section H2 --- */
@@ -334,35 +313,12 @@
   background: rgba(255,255,255,0.92);
 }
 
-/* Safe-area utilities for iOS notch / gesture bar */
-.safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
-.safe-top    { padding-top: env(safe-area-inset-top); }
-
-/* Skip to content (keyboard a11y) */
-.cs-skip-link {
-  position: absolute;
-  left: -9999px;
-  top: 12px;
-  z-index: 200;
-  background: #d4232a;
-  color: #fff;
-  padding: 10px 16px;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 13px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-.cs-skip-link:focus { left: 16px; }
-
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
   }
   .cs-reveal { opacity: 1; transform: none; }
-  .cs-ken-burns { animation: none !important; transform: none !important; }
-  .cs-pulse { animation: none !important; }
 }
