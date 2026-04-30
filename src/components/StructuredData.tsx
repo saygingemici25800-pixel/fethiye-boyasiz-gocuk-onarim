@@ -27,7 +27,7 @@ export function StructuredData() {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
         opens: "08:30",
-        closes: "18:00",
+        closes: "21:00",
       },
     ],
     sameAs: ["https://www.instagram.com/fethiye.boyasiz.gocuk"],

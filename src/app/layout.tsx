@@ -76,14 +76,17 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/seo/favicon-32x32.jpg", sizes: "32x32" },
-      { url: "/seo/favicon-192x192.jpg", sizes: "192x192" },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
     ],
-    apple: "/seo/apple-touch-icon.jpg",
+    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon.ico",
   },
   manifest: "/manifest.json",
   verification: {
-    // Google Search Console doğrulama kodunuzu buraya ekleyin
     google: "VjqAvhyF2BW0I0jr_WTzxAq0Pi4voEbkWnqg7-jOTuw",
   },
 };
@@ -98,8 +101,7 @@ export default function RootLayout({
       lang="tr"
       className={`${roboto.variable} ${dosis.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans text-[#374151]">
-        <a href="#main" className="cs-skip-link">Ana içeriğe geç</a>
+      <body className="min-h-full flex flex-col font-sans text-[#4b5563]">
         <StructuredData />
         {children}
       </body>

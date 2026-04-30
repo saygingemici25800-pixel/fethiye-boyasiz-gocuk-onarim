@@ -11,17 +11,17 @@ export const SITE = {
   brand: "Fethiye Boyasız Göçük Onarım",
   phone: "0535 309 39 72",
   phoneHref: "tel:+905353093972",
-  whatsappHref: "https://wa.me/905353093972",
+  whatsapp: "https://wa.me/905353093972",
   address: "Taşyaka, 261. Sk. No:11, 48300 Fethiye/Muğla",
-  hours: "Pzt - Cmt: 08:30 - 18:00",
+  workingHours: "Pzt - Cmt: 08:30 - 21:00",
   social: {
-    facebook: "#",
     instagram: "https://www.instagram.com/fethiye.boyasiz.gocuk",
+    facebook: "#",
   },
 };
 
 export const NAV: NavLink[] = [
-  { label: "Anasayfa", href: "#" },
+  { label: "Anasayfa", href: "/" },
   { label: "Hakkımızda", href: "#hakkimizda" },
   { label: "Hizmetlerimiz", href: "#hizmetler" },
   { label: "Galerimiz", href: "/galeri" },
@@ -41,14 +41,16 @@ export const HERO_SLIDES: HeroSlide[] = [
   {
     small: "İZ BIRAKMADAN DÜZELTME",
     title: "Fethiye'nin Güvenilir Adresi",
-    subtitle: "Profesyonel ekipman ve tecrübeyle boyasız göçük onarımında Fethiye'nin tercih edilen markasıyız.",
+    subtitle:
+      "Profesyonel ekipman ve tecrübeyle boyasız göçük onarımında Fethiye'nin tercih edilen markasıyız.",
     cta: { label: "Hemen Ara", href: "tel:+905353093972" },
     image: "/images/gunes-sonrasi.jpeg",
   },
   {
     small: "YÜZLERCE MUTLU MÜŞTERİ",
     title: "Sonuçlarımız Ortada",
-    subtitle: "Öncesi-sonrası fotoğraflarımızı inceleyin, farkı kendi gözlerinizle görün.",
+    subtitle:
+      "Öncesi-sonrası fotoğraflarımızı inceleyin, farkı kendi gözlerinizle görün.",
     cta: { label: "Galerimizi İncele", href: "/galeri" },
     image: "/images/ppf-kaplama.jpeg",
   },
@@ -56,47 +58,42 @@ export const HERO_SLIDES: HeroSlide[] = [
 
 export const FEATURES: Feature[] = [
   {
-    title: "Orijinal Boya Korunur",
-    description: "Fabrika çıkışlı boyanıza dokunmuyoruz. Araç, sanki hiç göçük görmemiş gibi kalır.",
-    icon: "star",
+    title: "Uzman Ekip",
+    description: "Yıllarca tecrübe kazanmış uzman ustalarımızla hizmet veriyoruz.",
+    icon: "user",
   },
   {
-    title: "İz Bırakmadan Sonuç",
-    description:
-      "Özel PDR aletleriyle milimetrik hassasiyette çalışıyoruz. Onarım sonrası fark edilmez.",
+    title: "Kaliteli Ekipman",
+    description: "Sektörün en gelişmiş ekipmanları ile çalışıyoruz.",
     icon: "tools",
   },
   {
-    title: "Değer Kaybı Sıfır",
-    description:
-      "Boya yapılmadığı için tramer kaydı oluşmaz. Aracınızın 2. el değeri aynen korunur.",
-    icon: "smile",
+    title: "Garantili Hizmet",
+    description: "Tüm işlemlerimiz için memnuniyet garantisi sunuyoruz.",
+    icon: "star",
   },
   {
-    title: "Aynı Gün Teslim",
-    description:
-      "Küçük ve orta göçüklerde aracınızı aynı gün, büyük hasarlarda en geç 2 günde teslim ediyoruz.",
-    icon: "user",
+    title: "Müşteri Memnuniyeti",
+    description: "Yüzlerce mutlu müşteri ile referans aldığımız hizmetler.",
+    icon: "smile",
   },
 ];
 
 export const PROCESS_STEPS: ProcessStep[] = [
   {
-    title: "Ücretsiz Ekspertiz",
-    description: "Aracınızı detaylı inceliyor, hasar tespiti yapıyor ve size net fiyat veriyoruz. Sürpriz yok.",
+    title: "Aracınızı Getirin",
+    description: "Aracınızı atölyemize getirin, ücretsiz ekspertiz yapalım.",
     icon: "car",
   },
   {
-    title: "Boyasız Onarım",
-    description:
-      "PDR tekniğiyle, boyaya zarar vermeden göçükleri milimetrik hassasiyetle düzeltiyoruz.",
+    title: "Onarım Süreci",
+    description: "Uzman ekibimiz aracınızdaki hasarı boyasız yöntemle onarır.",
     icon: "tools",
     highlight: true,
   },
   {
-    title: "Kontrol & Teslim",
-    description:
-      "Son kontrolü birlikte yapıyoruz. Memnun kalmadığınız nokta varsa düzeltiyoruz, sonra teslim.",
+    title: "Teslim Alın",
+    description: "Aracınızı ilk günkü gibi parlak ve hasarsız teslim alın.",
     icon: "smile",
   },
 ];
@@ -113,7 +110,7 @@ export const SERVICES: Service[] = [
     href: "/hizmetler/dolu-hasari-onarimi",
   },
   {
-    title: "Küçük & Orta Göçük",
+    title: "Mini Onarım",
     image: "/images/mini-sonrasi.jpeg",
     href: "/hizmetler/kucuk-orta-gocuk-duzeltme",
   },

@@ -80,6 +80,11 @@ const EXTRA_SERVICES: ExtraService[] = [
     image: "/images/kaporta-boya-2.jpeg",
     description: "Hasarlı parça değişimi ve kaporta düzeltme işlemi.",
   },
+  {
+    title: "Detaylı İç Temizlik",
+    image: "/images/koltuk-sonrasi.jpeg",
+    description: "Koltuk, tavan ve panellerde derinlemesine temizlik.",
+  },
 ];
 
 export function ExtraServicesSection() {
@@ -95,7 +100,7 @@ export function ExtraServicesSection() {
           <h2 className="font-gambarino mt-3 text-[28px] leading-tight text-[#111827] md:text-[36px]">
             Ek <span className="text-[#d4232a]">Hizmetlerimiz</span>
           </h2>
-          <p className="mx-auto mt-4 max-w-md text-[15px] leading-relaxed text-[#4b5563]">
+          <p className="mx-auto mt-4 max-w-md text-[15px] leading-relaxed text-[#6b7280]">
             Göçük onarımının yanı sıra aracınız için kapsamlı bakım ve koruma hizmetleri sunuyoruz.
           </p>
         </div>
@@ -121,7 +126,7 @@ export function ExtraServicesSection() {
                 <h3 className="text-[13px] font-bold leading-snug text-[#111827]">
                   {service.title}
                 </h3>
-                <p className="mt-1.5 text-[11px] leading-relaxed text-[#4b5563]">
+                <p className="mt-1.5 text-[11px] leading-relaxed text-[#6b7280]">
                   {service.description}
                 </p>
               </div>

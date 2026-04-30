@@ -139,7 +139,7 @@ export const SERVICE_DETAILS: ServiceDetail[] = [
   },
   {
     slug: "kucuk-orta-gocuk-duzeltme",
-    title: "Küçük & Orta Göçük Düzeltme",
+    title: "Mini Onarım",
     metaTitle: "Küçük ve Orta Göçük Düzeltme Fethiye | Hızlı PDR Onarım",
     metaDescription:
       "Fethiye'de küçük ve orta boy göçük düzeltme. Park göçükleri, kapı çarpması ve günlük hasarları boyasız yöntemle aynı gün onarıyoruz.",
