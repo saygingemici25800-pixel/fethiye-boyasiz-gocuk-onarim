@@ -11,7 +11,7 @@ export const SITE = {
   brand: "Fethiye Boyasız Göçük Onarım",
   phone: "0535 309 39 72",
   phoneHref: "tel:+905353093972",
-  whatsapp: "https://wa.me/905353093972",
+  whatsappHref: "https://wa.me/905353093972",
   address: "Taşyaka, 261. Sk. No:11, 48300 Fethiye/Muğla",
   workingHours: "Pzt - Cmt: 08:30 - 21:00",
   social: {
