@@ -1,57 +1,67 @@
 "use client";
 
-import { useScrollReveal } from "@/hooks/useScrollReveal";
+import * as React from "react";
+import {
+  CardTransformed,
+  CardsContainer,
+  ContainerScroll,
+  ReviewStars,
+} from "@/components/blocks/animated-cards-stack";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 interface Testimonial {
+  id: string;
   name: string;
   car: string;
   rating: number;
-  comment: string;
+  description: string;
   initial: string;
 }
 
 const TESTIMONIALS: Testimonial[] = [
   {
+    id: "t1",
     name: "Mehmet K.",
     car: "Volkswagen Passat",
     rating: 5,
-    comment:
+    description:
       "Aracımdaki dolu hasarını boyasız olarak mükemmel şekilde onardılar. Hiçbir iz kalmadı, tramer kaydı da oluşmadı. Fethiye'de bu işin en iyisi.",
     initial: "M",
   },
   {
+    id: "t2",
     name: "Ayşe T.",
     car: "Renault Megane",
     rating: 5,
-    comment:
-      "Park halindeyken kapım çarpılmıştı. Boyasız onarımla bir günde teslim aldım, hiç belli olmuyor. Profesyonel ekip, güler yüzlü hizmet. Tavsiye ederim.",
+    description:
+      "Park halindeyken kapım çarpılmıştı. Boyasız onarımla bir günde teslim aldım, hiç belli olmuyor. Profesyonel ekip, güler yüzlü hizmet.",
     initial: "A",
   },
   {
+    id: "t3",
     name: "Burak Y.",
     car: "Peugeot 408",
     rating: 5,
-    comment:
-      "Aracımı satmadan önce kaportadaki göçükleri düzelttirdim. İlk günkü gibi oldu, satış fiyatım da yükseldi. Fiyat-performans olarak harika bir yer.",
+    description:
+      "Aracımı satmadan önce kaportadaki göçükleri düzelttirdim. İlk günkü gibi oldu, satış fiyatım da yükseldi. Fiyat-performans olarak harika.",
     initial: "B",
+  },
+  {
+    id: "t4",
+    name: "Selin D.",
+    car: "BMW 320i",
+    rating: 5,
+    description:
+      "Dolu yağışından sonra aracım perişan haldeydi. 2 gün içinde tüm göçükleri çıkardılar, sigortayla da bizzat ilgilendiler. Çok teşekkürler.",
+    initial: "S",
   },
 ];
 
-function StarIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
-      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-    </svg>
-  );
-}
-
 export function TestimonialsSection() {
-  useScrollReveal();
-
   return (
-    <section className="bg-white py-20 md:py-24">
-      <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
-        <div className="cs-reveal mb-12 text-center md:mb-16">
+    <section className="bg-white">
+      <div className="mx-auto max-w-[1200px] px-6 pt-20 md:pt-24 lg:px-8">
+        <div className="text-center">
           <span className="mb-3 inline-block rounded-full bg-[#2d2d2d]/[.06] px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-[#2d2d2d]/70">
             Müşterilerimiz Diyor Ki
           </span>
@@ -59,47 +69,52 @@ export function TestimonialsSection() {
             Memnun <span className="text-[#d4232a]">Müşterilerimiz</span>
           </h2>
           <p className="mx-auto mt-4 max-w-md text-[15px] leading-relaxed text-[#6b7280]">
-            Yüzlerce müşterimizin güvenini kazandık. İşte deneyimleri.
+            Yüzlerce müşterimizin güvenini kazandık. Sayfayı kaydırın, deneyimlerini okuyun.
           </p>
         </div>
-
-        <div className="cs-stagger grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-6">
-          {TESTIMONIALS.map((t, i) => (
-            <div
-              key={t.name}
-              className={`cs-reveal cs-reveal-delay-${i + 1} cs-card-lift relative overflow-hidden rounded-2xl border border-gray-100/80 bg-white p-7`}
-            >
-              {/* Quote mark */}
-              <div className="absolute -right-2 -top-2 text-[80px] font-black leading-none text-[#d4232a]/[.08]" aria-hidden>
-                "
-              </div>
-
-              {/* Stars */}
-              <div className="relative mb-4 flex gap-0.5">
-                {Array.from({ length: t.rating }).map((_, idx) => (
-                  <StarIcon key={idx} className="h-4 w-4 text-[#f59e0b]" />
-                ))}
-              </div>
-
-              {/* Comment */}
-              <p className="relative mb-6 text-[14px] leading-[1.7] text-[#4b5563]">
-                {t.comment}
-              </p>
-
-              {/* Author */}
-              <div className="relative flex items-center gap-3 border-t border-gray-100 pt-4">
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2d2d2d] text-sm font-bold text-white">
-                  {t.initial}
-                </span>
-                <div>
-                  <p className="text-[13px] font-bold text-[#111827]">{t.name}</p>
-                  <p className="text-[11px] text-[#6b7280]">{t.car}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
+
+      <ContainerScroll className="container mx-auto h-[300vh] px-6">
+        <div className="sticky left-0 top-0 flex h-svh w-full items-center justify-center">
+          <CardsContainer className="mx-auto h-[420px] w-[340px] sm:h-[440px] sm:w-[400px]">
+            {TESTIMONIALS.map((t, index) => (
+              <CardTransformed
+                arrayLength={TESTIMONIALS.length}
+                key={t.id}
+                variant="light"
+                index={index + 2}
+                role="article"
+                className="!p-8"
+              >
+                <div className="flex flex-col items-center space-y-5 text-center">
+                  <ReviewStars
+                    className="text-[#f59e0b]"
+                    rating={t.rating}
+                  />
+                  <blockquote className="text-[15px] leading-[1.7] text-[#4b5563]">
+                    &ldquo;{t.description}&rdquo;
+                  </blockquote>
+                </div>
+                <div className="flex items-center gap-4 border-t border-gray-100 pt-5 w-full justify-center">
+                  <Avatar className="!size-12 border-2 border-[#2d2d2d]">
+                    <AvatarFallback className="bg-[#d4232a]">
+                      {t.initial}
+                    </AvatarFallback>
+                  </Avatar>
+                  <div className="text-left">
+                    <span className="block text-[14px] font-bold tracking-tight text-[#111827]">
+                      {t.name}
+                    </span>
+                    <span className="block text-[12px] text-[#6b7280]">
+                      {t.car}
+                    </span>
+                  </div>
+                </div>
+              </CardTransformed>
+            ))}
+          </CardsContainer>
+        </div>
+      </ContainerScroll>
     </section>
   );
 }
