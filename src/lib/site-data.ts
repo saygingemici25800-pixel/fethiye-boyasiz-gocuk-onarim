@@ -36,7 +36,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     subtitle:
       "Aracınızdaki göçükleri boyasız, hızlı ve iz bırakmadan onarıyoruz. Orijinal boyanız korunur, aracınızın değeri düşmez.",
     cta: { label: "Ücretsiz Ekspertiz Al", href: "#iletisim" },
-    image: "/images/dolu-sonrasi.jpeg",
+    image: "/images/vc-arac.jpeg",
   },
   {
     small: "İZ BIRAKMADAN DÜZELTME",
@@ -44,7 +44,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     subtitle:
       "Profesyonel ekipman ve tecrübeyle boyasız göçük onarımında Fethiye'nin tercih edilen markasıyız.",
     cta: { label: "Hemen Ara", href: "tel:+905353093972" },
-    image: "/images/gunes-sonrasi.jpeg",
+    image: "/images/cv-arac.jpeg",
   },
   {
     small: "YÜZLERCE MUTLU MÜŞTERİ",
