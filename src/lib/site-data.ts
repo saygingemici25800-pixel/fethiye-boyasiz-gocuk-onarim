@@ -52,7 +52,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     subtitle:
       "Öncesi-sonrası fotoğraflarımızı inceleyin, farkı kendi gözlerinizle görün.",
     cta: { label: "Galerimizi İncele", href: "/galeri" },
-    image: "/images/ppf-kaplama.jpeg",
+    image: "/images/dolu-sonrasi.jpeg",
   },
 ];
 
